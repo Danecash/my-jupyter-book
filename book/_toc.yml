@@ -1,9 +1,10 @@
-
-
 format: jb-book
-
 root: intro.md
 
-chapters:
-  - file: exercises/exercise-1-intro
-  - file: labs/lab-5-some-topic
+parts:
+  - caption: Exercises
+    chapters:
+      - file: exercises/exercise-1-python-basics
+  - caption: Labs
+    chapters:
+      - file: labs/lab-5-pytorch-intro
