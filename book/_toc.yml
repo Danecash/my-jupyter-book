@@ -8,3 +8,6 @@ parts:
   - caption: Labs
     chapters:
       - file: labs/lab-5-pytorch-intro
+  - caption: Group Projects
+    chapters:
+      - file: group-activities/resources
