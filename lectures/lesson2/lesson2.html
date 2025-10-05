@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,6 +60,7 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/lesson2/lesson2';</script>
+    <link rel="canonical" href="/my-jupyter-book/lectures/lesson2/lesson2.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="PyTorch Tensor Objects Attributes and Methods" href="../lesson3/lesson3.html" />
@@ -199,10 +200,12 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Labs</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../labs/lab-5-pytorch-intro.html">Laboratory Task 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../labs/Laboratory_Activty.html"><strong>Laboratory Activty</strong></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Group Projects</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../group-activities/resources.html">Group Activities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../group-activities/temporal.html">Applying Temporal Fusion Transformers for Air Quality Forecasting in Metro Manila</a></li>
 </ul>
 
     </div>
@@ -257,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/Danecash/my-jupyter-book" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -274,7 +277,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lesson2/lesson2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Danecash/my-jupyter-book/issues/new?title=Issue%20on%20page%20%2Flectures/lesson2/lesson2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -808,12 +811,12 @@ torch.Size([15, 2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 87., 134.,  58.],
-        [ 91.,  88.,  64.],
-        [102.,  43.,  37.]])
-tensor([[119., 133.],
-        [ 81., 101.],
-        [ 22.,  37.]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[91., 88., 64.],
+        [73., 67., 43.],
+        [73., 67., 43.]])
+tensor([[ 81., 101.],
+        [ 56.,  70.],
+        [ 56.,  70.]])
 </pre></div>
 </div>
 </div>
@@ -838,11 +841,11 @@ tensor([[119., 133.],
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter containing:
-tensor([[ 0.4306, -0.1795, -0.2767],
-        [-0.1600, -0.0609,  0.1494]], requires_grad=True)
+tensor([[-0.1961,  0.1546,  0.3232],
+        [ 0.1527,  0.5447, -0.0849]], requires_grad=True)
 torch.Size([2, 3])
 Parameter containing:
-tensor([ 0.4163, -0.0636], requires_grad=True)
+tensor([0.0308, 0.1709], requires_grad=True)
 torch.Size([2])
 </pre></div>
 </div>
@@ -860,10 +863,10 @@ torch.Size([2])
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Parameter containing:
- tensor([[ 0.4306, -0.1795, -0.2767],
-         [-0.1600, -0.0609,  0.1494]], requires_grad=True),
+ tensor([[-0.1961,  0.1546,  0.3232],
+         [ 0.1527,  0.5447, -0.0849]], requires_grad=True),
  Parameter containing:
- tensor([ 0.4163, -0.0636], requires_grad=True)]
+ tensor([0.0308, 0.1709], requires_grad=True)]
 </pre></div>
 </div>
 </div>
@@ -891,21 +894,21 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[  7.9265,  -9.3934],
-        [  6.0972, -10.4130],
-        [ -2.2230, -13.4696],
-        [ 26.3837, -13.4679],
-        [ -6.4731,  -6.4844],
-        [  7.9265,  -9.3934],
-        [  6.0972, -10.4130],
-        [ -2.2230, -13.4696],
-        [ 26.3837, -13.4679],
-        [ -6.4731,  -6.4844],
-        [  7.9265,  -9.3934],
-        [  6.0972, -10.4130],
-        [ -2.2230, -13.4696],
-        [ 26.3837, -13.4679],
-        [ -6.4731,  -6.4844]], grad_fn=&lt;AddmmBackward0&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 9.9705, 44.1613],
+        [16.4739, 56.5655],
+        [22.4313, 81.5228],
+        [-1.3658, 36.0240],
+        [23.9638, 57.0555],
+        [ 9.9705, 44.1613],
+        [16.4739, 56.5655],
+        [22.4313, 81.5228],
+        [-1.3658, 36.0240],
+        [23.9638, 57.0555],
+        [ 9.9705, 44.1613],
+        [16.4739, 56.5655],
+        [22.4313, 81.5228],
+        [-1.3658, 36.0240],
+        [23.9638, 57.0555]], grad_fn=&lt;AddmmBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -931,8 +934,8 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor(9308.2939, grad_fn=&lt;MseLossBackward0&gt;)
-9308.2939453125
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor(3153.0586, grad_fn=&lt;MseLossBackward0&gt;)
+3153.05859375
 </pre></div>
 </div>
 </div>
@@ -1002,16 +1005,16 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [10/100], Loss: 384.9321
-Epoch [20/100], Loss: 14.5109
-Epoch [30/100], Loss: 364.2264
-Epoch [40/100], Loss: 2477.3325
-Epoch [50/100], Loss: 394.1227
-Epoch [60/100], Loss: 214.9893
-Epoch [70/100], Loss: 151.2189
-Epoch [80/100], Loss: 49.9320
-Epoch [90/100], Loss: 2.8986
-Epoch [100/100], Loss: 15.7678
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [10/100], Loss: 211.4371
+Epoch [20/100], Loss: 20.5877
+Epoch [30/100], Loss: 126.7047
+Epoch [40/100], Loss: 730.9726
+Epoch [50/100], Loss: 748.0690
+Epoch [60/100], Loss: 198.1263
+Epoch [70/100], Loss: 14208.9141
+Epoch [80/100], Loss: 128310.3359
+Epoch [90/100], Loss: 9383.7783
+Epoch [100/100], Loss: 6327.7856
 </pre></div>
 </div>
 </div>
@@ -1026,7 +1029,7 @@ Epoch [100/100], Loss: 15.7678
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.679666519165039
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>493.8370361328125
 </pre></div>
 </div>
 </div>
