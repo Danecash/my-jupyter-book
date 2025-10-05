@@ -193,10 +193,6 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html"><strong>Training CNN Model using MNIST Dataset</strong></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../exercises/exercise-1-python-basics.html">Reaction Paper: “Machine Learning: Living in the Age of AI | A WIRED Film”</a></li>
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Labs</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../labs/lab-5-pytorch-intro.html">Laboratory Task 5</a></li>
@@ -811,12 +807,12 @@ torch.Size([15, 2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[91., 88., 64.],
-        [73., 67., 43.],
-        [73., 67., 43.]])
-tensor([[ 81., 101.],
-        [ 56.,  70.],
-        [ 56.,  70.]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 87., 134.,  58.],
+        [102.,  43.,  37.],
+        [ 87., 134.,  58.]])
+tensor([[119., 133.],
+        [ 22.,  37.],
+        [119., 133.]])
 </pre></div>
 </div>
 </div>
@@ -841,11 +837,11 @@ tensor([[ 81., 101.],
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter containing:
-tensor([[-0.1961,  0.1546,  0.3232],
-        [ 0.1527,  0.5447, -0.0849]], requires_grad=True)
+tensor([[-0.2939, -0.0139,  0.4065],
+        [ 0.2272,  0.0382,  0.1740]], requires_grad=True)
 torch.Size([2, 3])
 Parameter containing:
-tensor([0.0308, 0.1709], requires_grad=True)
+tensor([ 0.3438, -0.0247], requires_grad=True)
 torch.Size([2])
 </pre></div>
 </div>
@@ -863,10 +859,10 @@ torch.Size([2])
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Parameter containing:
- tensor([[-0.1961,  0.1546,  0.3232],
-         [ 0.1527,  0.5447, -0.0849]], requires_grad=True),
+ tensor([[-0.2939, -0.0139,  0.4065],
+         [ 0.2272,  0.0382,  0.1740]], requires_grad=True),
  Parameter containing:
- tensor([0.0308, 0.1709], requires_grad=True)]
+ tensor([ 0.3438, -0.0247], requires_grad=True)]
 </pre></div>
 </div>
 </div>
@@ -894,21 +890,21 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 9.9705, 44.1613],
-        [16.4739, 56.5655],
-        [22.4313, 81.5228],
-        [-1.3658, 36.0240],
-        [23.9638, 57.0555],
-        [ 9.9705, 44.1613],
-        [16.4739, 56.5655],
-        [22.4313, 81.5228],
-        [-1.3658, 36.0240],
-        [23.9638, 57.0555],
-        [ 9.9705, 44.1613],
-        [16.4739, 56.5655],
-        [22.4313, 81.5228],
-        [-1.3658, 36.0240],
-        [23.9638, 57.0555]], grad_fn=&lt;AddmmBackward0&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ -4.5614,  26.6074],
+        [ -1.6071,  35.1546],
+        [ -3.5095,  34.9610],
+        [-15.1887,  31.2354],
+        [  7.1855,  31.5054],
+        [ -4.5614,  26.6074],
+        [ -1.6071,  35.1546],
+        [ -3.5095,  34.9610],
+        [-15.1887,  31.2354],
+        [  7.1855,  31.5054],
+        [ -4.5614,  26.6074],
+        [ -1.6071,  35.1546],
+        [ -3.5095,  34.9610],
+        [-15.1887,  31.2354],
+        [  7.1855,  31.5054]], grad_fn=&lt;AddmmBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -934,8 +930,8 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor(3153.0586, grad_fn=&lt;MseLossBackward0&gt;)
-3153.05859375
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor(5958.2319, grad_fn=&lt;MseLossBackward0&gt;)
+5958.23193359375
 </pre></div>
 </div>
 </div>
@@ -1005,16 +1001,16 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [10/100], Loss: 211.4371
-Epoch [20/100], Loss: 20.5877
-Epoch [30/100], Loss: 126.7047
-Epoch [40/100], Loss: 730.9726
-Epoch [50/100], Loss: 748.0690
-Epoch [60/100], Loss: 198.1263
-Epoch [70/100], Loss: 14208.9141
-Epoch [80/100], Loss: 128310.3359
-Epoch [90/100], Loss: 9383.7783
-Epoch [100/100], Loss: 6327.7856
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [10/100], Loss: 788.9976
+Epoch [20/100], Loss: 28750.1094
+Epoch [30/100], Loss: 4492.0132
+Epoch [40/100], Loss: 14363.8711
+Epoch [50/100], Loss: 15.4284
+Epoch [60/100], Loss: 3142.9453
+Epoch [70/100], Loss: 5.5293
+Epoch [80/100], Loss: 90.4732
+Epoch [90/100], Loss: 15.9124
+Epoch [100/100], Loss: 38.6673
 </pre></div>
 </div>
 </div>
@@ -1029,7 +1025,7 @@ Epoch [100/100], Loss: 6327.7856
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>493.8370361328125
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17.442441940307617
 </pre></div>
 </div>
 </div>
