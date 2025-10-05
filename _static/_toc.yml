@@ -12,7 +12,7 @@ parts:
       - file: lectures/lesson6/lesson6
   - caption: Exercises
     chapters:
-      - file: exercises/exercise-1-python-basics
+      - file: exercises/exercise-1-python-basics.ipynb
   - caption: Labs
     chapters:
       - file: labs/lab-5-pytorch-intro
