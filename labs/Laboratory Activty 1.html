@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Laboratory Task 5 &#8212; My JupyterBook</title>
+    <title>Laboratory Activty 1 &#8212; My JupyterBook</title>
   
   
   
@@ -57,14 +57,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/lab-5-pytorch-intro';</script>
-    <link rel="canonical" href="/my-jupyter-book/labs/lab-5-pytorch-intro.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'labs/Laboratory Activty 1';</script>
+    <link rel="canonical" href="/my-jupyter-book/labs/Laboratory Activty 1.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Laboratory Task 6" href="Laboratory_Activty.html" />
-    <link rel="prev" title="Laboratory Activity 4" href="Laboratory%20Activity%204.html" />
+    <link rel="next" title="Laboratory Activty 2" href="Laboratory%20Activty%202.html" />
+    <link rel="prev" title="Reaction Paper: “Machine Learning: Living in the Age of AI | A WIRED Film”" href="../exercises/exercise-1-python-basics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -197,11 +195,11 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Labs</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Laboratory%20Activty%201.html">Laboratory Activty 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Laboratory Activty 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory%20Activty%202.html">Laboratory Activty 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory%20Activity%203.html">Laboratory Activity 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory%20Activity%204.html">Laboratory Activity 4</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Laboratory Task 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lab-5-pytorch-intro.html">Laboratory Task 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Laboratory_Activty.html">Laboratory Task 6</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Group Projects</span></p>
@@ -279,7 +277,7 @@
       
       
       
-      <li><a href="https://github.com/Danecash/my-jupyter-book/issues/new?title=Issue%20on%20page%20%2Flabs/lab-5-pytorch-intro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Danecash/my-jupyter-book/issues/new?title=Issue%20on%20page%20%2Flabs/Laboratory Activty 1.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +307,7 @@
       
       
       
-      <li><a href="../_sources/labs/lab-5-pytorch-intro.ipynb" target="_blank"
+      <li><a href="../_sources/labs/Laboratory Activty 1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -380,7 +378,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -391,11 +391,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Laboratory Task 5</h1>
+    <h1>Laboratory Activty 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptive-analytics">Descriptive Analytics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagnostic-analytics">Diagnostic Analytics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-analytics">Predictive Analytics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prescriptive-analytics">Prescriptive Analytics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-scenario">Example Scenario:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laboratory-task-1">Laboratory Task 1</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -405,153 +418,87 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="laboratory-task-5">
-<h1>Laboratory Task 5<a class="headerlink" href="#laboratory-task-5" title="Link to this heading">#</a></h1>
-<p><span class="math notranslate nohighlight">\(name:\)</span> Dane Casey C. Casino</p>
-<p><span class="math notranslate nohighlight">\(Section:\)</span> DS4A</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Perform Standard Imports</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Create a function called set_seed() that accepts seed: int as a parameter, </span>
-<span class="c1"># this function must return nothing but just set the seed to a certain value.</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">set_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-    <span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3. Create a NumPy array called &quot;arr&quot; that contains 6 random integers between 0 (inclusive) </span>
-<span class="c1"># and 5 (exclusive), call the set_seed() function and use 42 as the seed parameter.</span>
-<span class="n">set_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numpy array:&quot;</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Numpy array: [3 4 2 4 4 1]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 4. Create a tensor &quot;x&quot; from the array above</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="n">x</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([3, 4, 2, 4, 4, 1], dtype=torch.int32)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 5. Change the dtype of x from int32 to int64</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tensor x with dtype int64:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x with dtype int64: tensor([3, 4, 2, 4, 4, 1])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Reshape x into a 3x2 tensor</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reshaped tensor x:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reshaped tensor x: tensor([[3, 4],
-        [2, 4],
-        [4, 1]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 7. Return the right-hand column of tensor x</span>
-<span class="n">right_column</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Right hand column of x:&quot;</span><span class="p">,</span> <span class="n">right_column</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Right hand column of x: tensor([4, 4, 1])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8. Without changing x, return a tensor of square values of x</span>
-<span class="n">x_sqaured</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tensor x squared:&quot;</span><span class="p">,</span> <span class="n">x_sqaured</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor x squared: tensor([[ 9, 16],
-        [ 4, 16],
-        [16,  1]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 9. Create a tensor y with the same number of elements as x, that can be matrix-multiplied with x</span>
-<span class="n">set_seed</span> <span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tensor y:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tensor y: tensor([[2, 2, 1],
-        [4, 1, 0]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10. Find the matrix product of x and y.</span>
-<span class="n">product</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix product of x and y:&quot;</span><span class="p">,</span> <span class="n">product</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix product of x and y: tensor([[22, 10,  3],
-        [20,  8,  2],
-        [12,  9,  4]])
-</pre></div>
-</div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="laboratory-activty-1">
+<h1>Laboratory Activty 1<a class="headerlink" href="#laboratory-activty-1" title="Link to this heading">#</a></h1>
+<p><img alt="Image" src="../_images/analytics21.png" /><br />
+<em>The 4 Types of Data Analytics (Matteson A., 2017)</em></p>
+<p>Data analytics is the field that includes various methods of data exploration. Any kind of information can undergo data analytics to extract insights that can drive improvements. These techniques can uncover trends and metrics that might otherwise be obscured within large datasets. Such insights can then be utilized to optimize processes, enhancing the overall efficiency of a business or system. There are four types of data analytics, each are in their own respective level of value and complexity.</p>
+<section id="descriptive-analytics">
+<h2>Descriptive Analytics<a class="headerlink" href="#descriptive-analytics" title="Link to this heading">#</a></h2>
+<p>Descriptive analytics focuses on summarizing historical data to understand what has happened over a given period. It uses data aggregation and data mining techniques to provide insights into past performance and trends. By creating reports, dashboards, and scorecards, descriptive analytics helps organizations understand their current status and how they got there. This form of analytics is foundational, as it provides the context and baseline information necessary for more advanced types of analysis.</p>
+</section>
+<section id="diagnostic-analytics">
+<h2>Diagnostic Analytics<a class="headerlink" href="#diagnostic-analytics" title="Link to this heading">#</a></h2>
+<p>Diagnostic analytics goes a step further by examining data to determine the causes of past outcomes. It delves into the details of descriptive analytics to uncover why certain events occurred. Techniques such as drill-down, data discovery, data mining, and correlations are used to identify patterns and relationships. This type of analytics helps organizations understand the underlying reasons behind trends and anomalies, providing a deeper insight into the factors influencing their performance.</p>
+</section>
+<section id="predictive-analytics">
+<h2>Predictive Analytics<a class="headerlink" href="#predictive-analytics" title="Link to this heading">#</a></h2>
+<p>Predictive analytics uses statistical models and machine learning algorithms to analyze historical data and make forecasts about future events. By identifying patterns and trends from past data, predictive analytics can estimate the likelihood of future outcomes. This type of analytics is crucial for decision-making, as it allows organizations to anticipate potential challenges and opportunities, helping them to plan and strategize more effectively.</p>
+</section>
+<section id="prescriptive-analytics">
+<h2>Prescriptive Analytics<a class="headerlink" href="#prescriptive-analytics" title="Link to this heading">#</a></h2>
+<p>Prescriptive analytics goes beyond predicting future outcomes by recommending actions to achieve desired results. It uses optimization and simulation algorithms to suggest the best course of action based on the predicted data. Prescriptive analytics takes into account various constraints and objectives, providing specific guidance on how to address potential issues or capitalize on opportunities. This advanced form of analytics supports decision-making by suggesting actions that can help achieve business goals and improve overall performance.</p>
+<p>Understanding the four types of analytics is crucial for mastering artificial intelligence (AI). Descriptive analytics lays the groundwork by summarizing historical data, providing insights into past trends essential for building predictive models in AI. Diagnostic analytics goes deeper, uncovering the reasons behind trends, which is fundamental in training AI algorithms to recognize patterns and anomalies effectively. Predictive analytics plays a pivotal role by forecasting future outcomes based on historical data, a capability vital for AI systems to make informed decisions and projections. Finally, prescriptive analytics not only predicts future scenarios but also prescribes optimal actions to achieve desired outcomes, guiding AI systems in making proactive and strategic decisions. Together, these analytics types form the backbone of AI learning, equipping developers and researchers with the tools to enhance AI capabilities, optimize performance, and drive innovation across various domains.</p>
+</section>
+<section id="example-scenario">
+<h2>Example Scenario:<a class="headerlink" href="#example-scenario" title="Link to this heading">#</a></h2>
+<p>Dr. Jake is a medical doctor and the CEO of Astro JR, a giant pharmaceutical company in the Philippines. To support the production and use of AstroJR’s COVID19 vaccine, this company has implemented a number of business intelligence and data analytics tools. Your task is to provide the appropriate and necessary analytical questions Dr. Jake must ask his analytics team in order to provide better deployment and production of COVID19 vaccines around the world using descriptive, predictive, and prescriptive analytics.</p>
+<ul class="simple">
+<li><p><strong>Descriptive:</strong> How many infected cases since last week?</p></li>
+<li><p><strong>Diagnostic:</strong> What factor affects the demand of AstroJR’s COVID19 vaccine?</p></li>
+<li><p><strong>Predictive:</strong> How many deaths next week?</p></li>
+<li><p><strong>Prescriptive:</strong> If the number of cases will increase next week, how many hospital staff should be here to adequately treat the influx of patients?</p></li>
+</ul>
+<p>To address the key questions identified by the analytics team, historical data on deaths will be crucial. By analyzing this time-series data, the team can leverage statistical modeling techniques to uncover patterns and trends that will enable them to generate accurate forecasts. The inclusion of a time variable in the inquiry makes the use of these statistical models essential, as they are specifically designed to handle and extract insights from data with a temporal component. This predictive modeling process will also introduce the team to the potential applications of Artificial Intelligence (AI) in this domain.</p>
+</section>
+<section id="laboratory-task-1">
+<h2>Laboratory Task 1<a class="headerlink" href="#laboratory-task-1" title="Link to this heading">#</a></h2>
+<p><strong>Instruction:</strong> From the example scenario above, create additional two inquiries for each type of data analytics.</p>
+<ul class="simple">
+<li><p><strong>Descriptive:</strong></p></li>
+</ul>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">How</span> <span class="pre">many</span> <span class="pre">students</span> <span class="pre">have</span> <span class="pre">been</span> <span class="pre">fully</span> <span class="pre">vaccinated</span> <span class="pre">in</span> <span class="pre">each</span> <span class="pre">university</span> <span class="pre">campus</span> <span class="pre">over</span> <span class="pre">the</span> <span class="pre">past</span> <span class="pre">semester?</span></code></p>
+<p>→ Helps summarize overall vaccination coverage among campuses.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">percentage</span> <span class="pre">of</span> <span class="pre">students</span> <span class="pre">reported</span> <span class="pre">mild</span> <span class="pre">side</span> <span class="pre">effects</span> <span class="pre">after</span> <span class="pre">receiving</span> <span class="pre">their</span> <span class="pre">vaccine</span> <span class="pre">doses?</span></code></p>
+<p>→ Gives insights into post-vaccination experiences and helps build trust in the vaccination program.</p>
+</li>
+</ol>
+<ul class="simple">
+<li><p><strong>Diagnostic:</strong></p></li>
+</ul>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">Why</span> <span class="pre">did</span> <span class="pre">certain</span> <span class="pre">universities</span> <span class="pre">have</span> <span class="pre">lower</span> <span class="pre">student</span> <span class="pre">vaccination</span> <span class="pre">rates</span> <span class="pre">compared</span> <span class="pre">to</span> <span class="pre">others?</span></code></p>
+<p>→ Identifies possible causes such as accessibility issues, misinformation, or scheduling conflicts.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">factors</span> <span class="pre">contributed</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">higher</span> <span class="pre">vaccine</span> <span class="pre">hesitancy</span> <span class="pre">among</span> <span class="pre">freshmen</span> <span class="pre">students?</span></code></p>
+<p>→ Helps uncover behavioral or informational barriers affecting vaccine confidence.</p>
+</li>
+</ol>
+<ul class="simple">
+<li><p><strong>Predictive:</strong></p></li>
+</ul>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">Based</span> <span class="pre">on</span> <span class="pre">current</span> <span class="pre">data,</span> <span class="pre">how</span> <span class="pre">many</span> <span class="pre">students</span> <span class="pre">are</span> <span class="pre">expected</span> <span class="pre">to</span> <span class="pre">complete</span> <span class="pre">their</span> <span class="pre">second</span> <span class="pre">dose</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">end</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">school</span> <span class="pre">year?</span></code></p>
+<p>→ Assists in anticipating vaccine supply needs.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Which</span> <span class="pre">campuses</span> <span class="pre">are</span> <span class="pre">likely</span> <span class="pre">to</span> <span class="pre">experience</span> <span class="pre">an</span> <span class="pre">increase</span> <span class="pre">in</span> <span class="pre">COVID-19</span> <span class="pre">cases</span> <span class="pre">during</span> <span class="pre">exam</span> <span class="pre">season?</span></code></p>
+<p>→ Helps the health team prepare for potential outbreaks when students gather more frequently.</p>
+</li>
+</ol>
+<ul class="simple">
+<li><p><strong>Prescriptive:</strong></p></li>
+</ul>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">If</span> <span class="pre">student</span> <span class="pre">vaccination</span> <span class="pre">rates</span> <span class="pre">remain</span> <span class="pre">low,</span> <span class="pre">what</span> <span class="pre">incentive</span> <span class="pre">programs</span> <span class="pre">(e.g.,</span> <span class="pre">discounts,</span> <span class="pre">certificates,</span> <span class="pre">or</span> <span class="pre">free</span> <span class="pre">meals)</span> <span class="pre">should</span> <span class="pre">be</span> <span class="pre">implemented</span> <span class="pre">to</span> <span class="pre">increase</span> <span class="pre">participation?</span></code></p>
+<p>→ Suggests actionable strategies for improving vaccination engagement.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Given</span> <span class="pre">the</span> <span class="pre">predicted</span> <span class="pre">rise</span> <span class="pre">in</span> <span class="pre">cases</span> <span class="pre">during</span> <span class="pre">enrollment</span> <span class="pre">week,</span> <span class="pre">how</span> <span class="pre">should</span> <span class="pre">universities</span> <span class="pre">schedule</span> <span class="pre">on-campus</span> <span class="pre">classes</span> <span class="pre">to</span> <span class="pre">minimize</span> <span class="pre">infection</span> <span class="pre">risks?</span></code></p>
+<p>→ Provides guidance for proactive policy-making to maintain safety while resuming normal academic activities.</p>
+</li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -563,16 +510,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "myenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "myenv",
+            name: "python3",
             path: "./labs"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'myenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -585,20 +532,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Laboratory%20Activity%204.html"
+       href="../exercises/exercise-1-python-basics.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Laboratory Activity 4</p>
+        <p class="prev-next-title">Reaction Paper: “Machine Learning: Living in the Age of AI | A WIRED Film”</p>
       </div>
     </a>
     <a class="right-next"
-       href="Laboratory_Activty.html"
+       href="Laboratory%20Activty%202.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Laboratory Task 6</p>
+        <p class="prev-next-title">Laboratory Activty 2</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -608,6 +555,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptive-analytics">Descriptive Analytics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagnostic-analytics">Diagnostic Analytics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-analytics">Predictive Analytics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prescriptive-analytics">Prescriptive Analytics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-scenario">Example Scenario:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laboratory-task-1">Laboratory Task 1</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

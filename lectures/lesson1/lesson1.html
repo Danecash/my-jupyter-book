@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>DS413 | Deep Learning &#8212; My JupyterBook</title>
+    <title>Lecture 1 &#8212; My JupyterBook</title>
   
   
   
@@ -61,7 +61,7 @@
     <link rel="canonical" href="/my-jupyter-book/lectures/lesson1/lesson1.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="II. Understanding Deep Learning" href="../lesson2/lesson2.html" />
+    <link rel="next" title="Lecture 2" href="../lesson2/lesson2.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="../../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -182,14 +182,12 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">DS413 | Deep Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson2/lesson2.html">II. Understanding Deep Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson3/lesson3.html">PyTorch Tensor Objects Attributes and Methods</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../lesson4/lesson4.html">Main Types of Deep Learning Neural Networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson5/lesson5.html">III. Applications of Deep Learning</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html"><strong>Training CNN Model using MNIST Dataset</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/lesson2.html">Lecture 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/lesson3.html">Lecture 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/lesson4.html">Lecture 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson5/lesson5.html">Lecture 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html">Lecture 6</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="nav bd-sidenav">
@@ -197,8 +195,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Labs</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../labs/Laboratory%20Activty%201.html">Laboratory Activty 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../labs/Laboratory%20Activty%202.html">Laboratory Activty 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../labs/Laboratory%20Activity%203.html">Laboratory Activity 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../labs/Laboratory%20Activity%204.html">Laboratory Activity 4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../labs/lab-5-pytorch-intro.html">Laboratory Task 5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../labs/Laboratory_Activty.html"><strong>Laboratory Activty</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../labs/Laboratory_Activty.html">Laboratory Task 6</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Group Projects</span></p>
 <ul class="nav bd-sidenav">
@@ -389,7 +391,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>DS413 | Deep Learning</h1>
+    <h1>Lecture 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -399,6 +401,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds413-deep-learning">DS413 | Deep Learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructional-material">Instructional Material</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-foundational-concept-of-deep-learning">I. Foundational Concept of Deep Learning</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptive-analytics">Descriptive Analytics</a></li>
@@ -406,7 +409,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-analytics">Predictive Analytics</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prescriptive-analytics">Prescriptive Analytics</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-scenario">Example Scenario:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laboratory-task-1">Laboratory Task 1</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#artificial-intelligence-vs-machine-learning-vs-deep-learning">Artificial Intelligence vs. Machine Learning vs. Deep Learning</a><ul class="nav section-nav flex-column">
@@ -442,8 +444,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ds413-deep-learning">
-<h1>DS413 | Deep Learning<a class="headerlink" href="#ds413-deep-learning" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-1">
+<h1>Lecture 1<a class="headerlink" href="#lecture-1" title="Link to this heading">#</a></h1>
+<section id="ds413-deep-learning">
+<h2>DS413 | Deep Learning<a class="headerlink" href="#ds413-deep-learning" title="Link to this heading">#</a></h2>
+</section>
 <section id="instructional-material">
 <h2>Instructional Material<a class="headerlink" href="#instructional-material" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
@@ -483,16 +488,6 @@ document.write(`
 <li><p><strong>Prescriptive:</strong> If the number of cases will increase next week, how many hospital staff should be here to adequately treat the influx of patients?</p></li>
 </ul>
 <p>To address the key questions identified by the analytics team, historical data on deaths will be crucial. By analyzing this time-series data, the team can leverage statistical modeling techniques to uncover patterns and trends that will enable them to generate accurate forecasts. The inclusion of a time variable in the inquiry makes the use of these statistical models essential, as they are specifically designed to handle and extract insights from data with a temporal component. This predictive modeling process will also introduce the team to the potential applications of Artificial Intelligence (AI) in this domain.</p>
-</section>
-<section id="laboratory-task-1">
-<h3>Laboratory Task 1<a class="headerlink" href="#laboratory-task-1" title="Link to this heading">#</a></h3>
-<p><strong>Instruction:</strong> From the example scenario above, create additional two inquiries for each type of data analytics.</p>
-<ul class="simple">
-<li><p><strong>Descriptive:</strong></p></li>
-<li><p><strong>Diagnostic:</strong></p></li>
-<li><p><strong>Predictive:</strong></p></li>
-<li><p><strong>Prescriptive:</strong></p></li>
-</ul>
 </section>
 </section>
 <hr class="docutils" />
@@ -692,7 +687,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">II. Understanding Deep Learning</p>
+        <p class="prev-next-title">Lecture 2</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -712,6 +707,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds413-deep-learning">DS413 | Deep Learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructional-material">Instructional Material</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-foundational-concept-of-deep-learning">I. Foundational Concept of Deep Learning</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descriptive-analytics">Descriptive Analytics</a></li>
@@ -719,7 +715,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-analytics">Predictive Analytics</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prescriptive-analytics">Prescriptive Analytics</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-scenario">Example Scenario:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#laboratory-task-1">Laboratory Task 1</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#artificial-intelligence-vs-machine-learning-vs-deep-learning">Artificial Intelligence vs. Machine Learning vs. Deep Learning</a><ul class="nav section-nav flex-column">
