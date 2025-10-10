@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lecture 5 &#8212; My JupyterBook</title>
+    <title>Lecture 5 - Applications of Deep Learning &#8212; My JupyterBook</title>
   
   
   
@@ -63,8 +63,8 @@
     <link rel="canonical" href="/my-jupyter-book/lectures/lesson5/lesson5.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Lecture 6" href="../lesson6/lesson6.html" />
-    <link rel="prev" title="Lecture 4" href="../lesson4/lesson4.html" />
+    <link rel="next" title="Lecture 6 - Training CNN Model using MNIST Dataset" href="../lesson6/lesson6.html" />
+    <link rel="prev" title="Lecture 4 - Main Types of Deep Learning Neural Networks" href="../lesson4/lesson4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,12 +184,12 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lesson1/lesson1.html">Lecture 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson2/lesson2.html">Lecture 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson3/lesson3.html">Lecture 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson4/lesson4.html">Lecture 4</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html">Lecture 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/lesson1.html">Lecture 1 - Foundational Concept of Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/lesson2.html">Lecture 2 - Understanding Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/lesson3.html">Lecture 3 - PyTorch Tensor Objects Attributes and Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/lesson4.html">Lecture 4 - Main Types of Deep Learning Neural Networks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 5 - Applications of Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html">Lecture 6 - Training CNN Model using MNIST Dataset</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="nav bd-sidenav">
@@ -393,7 +393,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 5</h1>
+    <h1>Lecture 5 - Applications of Deep Learning</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -403,16 +403,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-applications-of-deep-learning">III. Applications of Deep Learning</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-activity">Group Activity</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-content-outline">Case Study Content Outline:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#group-activity">Group Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-content-outline">Case Study Content Outline:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning-in-computer-vision">Deep Learning in Computer Vision</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-data">Image Data</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning-in-computer-vision">Deep Learning in Computer Vision</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-data">Image Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convolutional-neural-network">Convolutional Neural Network</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-cnn">Why CNN?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convolution-layer">1. Convolution Layer</a><ul class="nav section-nav flex-column">
@@ -438,23 +435,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-5">
-<h1>Lecture 5<a class="headerlink" href="#lecture-5" title="Link to this heading">#</a></h1>
-<section id="iii-applications-of-deep-learning">
-<h2>III. Applications of Deep Learning<a class="headerlink" href="#iii-applications-of-deep-learning" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-5-applications-of-deep-learning">
+<h1>Lecture 5 - Applications of Deep Learning<a class="headerlink" href="#lecture-5-applications-of-deep-learning" title="Link to this heading">#</a></h1>
 <p>Deep learning has revolutionized multitude of tasks, transforming industries through its unparalleled ability to process and understand complex data. From computer vision tasks such as image and video analysis to natural language processing (NLP), time series analysis, and recommendation systems, deep learning models have redefined what is possible in AI-driven applications. By leveraging deep neural networks with multiple layers of abstraction, these systems can autonomously learn patterns and features from vast datasets, enabling unprecedented levels of accuracy and efficiency in tasks that traditionally required human intervention. This transformative technology has not only optimized processes in fields like healthcare, finance, and retail but has also paved the way for new innovations in personalized services, predictive analytics, and interactive user experiences. As a result, deep learning stands at the forefront of AI advancements, continually expanding its reach and capabilities across diverse domains, driven by its capacity to handle and interpret a wide array of data types with remarkable precision.</p>
 <section id="group-activity">
-<h3>Group Activity<a class="headerlink" href="#group-activity" title="Link to this heading">#</a></h3>
+<h2>Group Activity<a class="headerlink" href="#group-activity" title="Link to this heading">#</a></h2>
 <p><strong>Instruction:</strong> Look for an advanced deep learning architecture or framework (e.g., LSTM, Transformers, Autoencoders, GANs, etc.) and study how it is implemented and applied in real-world problems. Your group will prepare a presentation explaining the chosen architecture/framework and a mini case study highlighting its application in a specific field. Follow the LNCS format for the mini case study.</p>
 <section id="deliverables">
-<h4>Deliverables:<a class="headerlink" href="#deliverables" title="Link to this heading">#</a></h4>
+<h3>Deliverables:<a class="headerlink" href="#deliverables" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>A group presentation on the selected advanced deep learning architecture/framework and how it works.</p></li>
 <li><p>A mini case study report (LNCS format) about the application of the chosen deep learning approach in a particular domain.</p></li>
 </ol>
 </section>
 <section id="case-study-content-outline">
-<h4>Case Study Content Outline:<a class="headerlink" href="#case-study-content-outline" title="Link to this heading">#</a></h4>
+<h3>Case Study Content Outline:<a class="headerlink" href="#case-study-content-outline" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Introduction</strong> (Contextual background and introduction of the field.)</p></li>
 <li><p><strong>Application of the Chosen DL Architecture</strong> (How is the architecture/framework applied in the selected field?)</p></li>
@@ -464,14 +459,14 @@ document.write(`
 </section>
 </section>
 <section id="deep-learning-in-computer-vision">
-<h3>Deep Learning in Computer Vision<a class="headerlink" href="#deep-learning-in-computer-vision" title="Link to this heading">#</a></h3>
+<h2>Deep Learning in Computer Vision<a class="headerlink" href="#deep-learning-in-computer-vision" title="Link to this heading">#</a></h2>
 <p>Deep learning has become a powerful technique for advancing computer vision capabilities. Deep learning algorithms, particularly convolutional neural networks (CNNs), excel at extracting relevant features from visual data and building complex predictive models (Geniusee, 2022).</p>
 <p>Deep learning is used extensively in various computer vision tasks. For object detection, deep learning models like YOLO and Faster R-CNN can simultaneously locate and classify multiple objects in an image (TechTarget, 2023). Semantic segmentation models based on fully convolutional networks (FCNs) and U-Nets can precisely delineate the boundaries of objects, enabling detailed scene understanding (<a class="reference external" href="http://Run.AI">Run.AI</a>, 2023). Deep learning also enables effective image classification, localization, pose estimation, image style transfer, colorization, reconstruction, and synthesis (Sciencedirect, 2021).</p>
 <p>The key advantage of deep learning for computer vision is its ability to automatically learn hierarchical visual features from large datasets, without the need for manual feature engineering (IBM, 2023). Deep neural networks can discover low-level features like edges and textures, and progressively build up to higher-level semantic concepts. This end-to-end learning approach has led to significant performance improvements across a wide range of computer vision applications.</p>
 <p>In this section, we will introduce the Convolutional Neural Network, also known as CNN or ConvNets, as a better way for dealing with image classification, detection, segmentation, computer vision, and other tasks involving image datasets. We will also learn the image data and its composition.</p>
 </section>
 <section id="image-data">
-<h3>Image Data<a class="headerlink" href="#image-data" title="Link to this heading">#</a></h3>
+<h2>Image Data<a class="headerlink" href="#image-data" title="Link to this heading">#</a></h2>
 <p>It is first important to define the input shape of an image, which will be (input channels, image height, image width). Let’s say given an image of 14 x 14 pixels = 196 features like this. Each data point is an array of numbers describing how dark each pixel is, where value range from 0 to 255. These values can be normalized ranging from 0 to 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -492,7 +487,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/95e9bf60cbabd4f4c019cb03c81a6028f564b703eb5620275562f15e47ee3d69.png" src="../../_images/95e9bf60cbabd4f4c019cb03c81a6028f564b703eb5620275562f15e47ee3d69.png" />
+<img alt="../../_images/1c4807472912e2d70a134f3b91eb518079cb6780c4ea7892c171b3508ee476fd.png" src="../../_images/1c4807472912e2d70a134f3b91eb518079cb6780c4ea7892c171b3508ee476fd.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -594,7 +589,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:3: SyntaxWarning: invalid escape sequence &#39;\d&#39;
 &lt;&gt;:3: SyntaxWarning: invalid escape sequence &#39;\d&#39;
-C:\Users\ccdan\AppData\Local\Temp\ipykernel_2824\4294468529.py:3: SyntaxWarning: invalid escape sequence &#39;\d&#39;
+C:\Users\ccdan\AppData\Local\Temp\ipykernel_8324\4294468529.py:3: SyntaxWarning: invalid escape sequence &#39;\d&#39;
   img = cv2.imread(&#39;.\d0277596-4b93-4d74-9afa-7ee5000e169f.jpg&#39;)
 </pre></div>
 </div>
@@ -688,7 +683,6 @@ How many color channels does this Dolores Umbridge image have?</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">REMEMBER:</span></code> When you resize an image, the visible features can be stretched or distorted, and it’s crucial to consider the implications of this operation.</p>
 <p>Imagine you’re teaching a magical creature recognition spell to your model using peculiar, twisted images of Hagrid. If you only show it these odd, distorted versions of everyone’s favorite half-giant, your model might become so enchanted by these peculiarities that it’ll fumble and misfire when confronted with the true, undistorted Hagrid! Remember, in the world of AI, <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">model</span> <span class="pre">can</span> <span class="pre">only</span> <span class="pre">learn</span> <span class="pre">what</span> <span class="pre">you</span> <span class="pre">teach</span> <span class="pre">it</span></code>, so make sure it’s learning from the right magical scrolls!</p>
-</section>
 </section>
 <section id="convolutional-neural-network">
 <h2>Convolutional Neural Network<a class="headerlink" href="#convolutional-neural-network" title="Link to this heading">#</a></h2>
@@ -875,7 +869,7 @@ O = \frac{W - F + 2P}{S} + 1
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 4</p>
+        <p class="prev-next-title">Lecture 4 - Main Types of Deep Learning Neural Networks</p>
       </div>
     </a>
     <a class="right-next"
@@ -883,7 +877,7 @@ O = \frac{W - F + 2P}{S} + 1
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 6</p>
+        <p class="prev-next-title">Lecture 6 - Training CNN Model using MNIST Dataset</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -903,16 +897,13 @@ O = \frac{W - F + 2P}{S} + 1
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-applications-of-deep-learning">III. Applications of Deep Learning</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-activity">Group Activity</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-content-outline">Case Study Content Outline:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#group-activity">Group Activity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-content-outline">Case Study Content Outline:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning-in-computer-vision">Deep Learning in Computer Vision</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-data">Image Data</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning-in-computer-vision">Deep Learning in Computer Vision</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-data">Image Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convolutional-neural-network">Convolutional Neural Network</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-cnn">Why CNN?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convolution-layer">1. Convolution Layer</a><ul class="nav section-nav flex-column">

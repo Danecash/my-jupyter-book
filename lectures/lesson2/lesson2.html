@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lecture 2 &#8212; My JupyterBook</title>
+    <title>Lecture 2 - Understanding Deep Learning &#8212; My JupyterBook</title>
   
   
   
@@ -63,8 +63,8 @@
     <link rel="canonical" href="/my-jupyter-book/lectures/lesson2/lesson2.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Lecture 3" href="../lesson3/lesson3.html" />
-    <link rel="prev" title="Lecture 1" href="../lesson1/lesson1.html" />
+    <link rel="next" title="Lecture 3 - PyTorch Tensor Objects Attributes and Methods" href="../lesson3/lesson3.html" />
+    <link rel="prev" title="Lecture 1 - Foundational Concept of Deep Learning" href="../lesson1/lesson1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,12 +184,12 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lesson1/lesson1.html">Lecture 1</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson3/lesson3.html">Lecture 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson4/lesson4.html">Lecture 4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson5/lesson5.html">Lecture 5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html">Lecture 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/lesson1.html">Lecture 1 - Foundational Concept of Deep Learning</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 2 - Understanding Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/lesson3.html">Lecture 3 - PyTorch Tensor Objects Attributes and Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/lesson4.html">Lecture 4 - Main Types of Deep Learning Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson5/lesson5.html">Lecture 5 - Applications of Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html">Lecture 6 - Training CNN Model using MNIST Dataset</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="nav bd-sidenav">
@@ -393,7 +393,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 2</h1>
+    <h1>Lecture 2 - Understanding Deep Learning</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -403,7 +403,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-understanding-deep-learning">II. Understanding Deep Learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#artificial-neural-network">Artificial Neural Network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedforward-neural-network">Feedforward Neural Network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backward-propagation-of-errors">Backward Propagation of Errors</a></li>
@@ -437,12 +436,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-2">
-<h1>Lecture 2<a class="headerlink" href="#lecture-2" title="Link to this heading">#</a></h1>
-<section id="ii-understanding-deep-learning">
-<h2>II. Understanding Deep Learning<a class="headerlink" href="#ii-understanding-deep-learning" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-2-understanding-deep-learning">
+<h1>Lecture 2 - Understanding Deep Learning<a class="headerlink" href="#lecture-2-understanding-deep-learning" title="Link to this heading">#</a></h1>
 <p>Having explored the historical background and inspiration behind deep learning, we can now delve into understanding the underlying mechanisms of this seemingly sci-fi technology. This journey will uncover how deep learning works, including the foundational concepts, methodologies, and real-world applications that make it a transformative force in modern technology.</p>
-</section>
 <section id="artificial-neural-network">
 <h2>Artificial Neural Network<a class="headerlink" href="#artificial-neural-network" title="Link to this heading">#</a></h2>
 <p>Artificial Neural Networks (ANNs) consist of artificial neurons, known as units, organized into layers that form the entire network. These layers can range from having a few dozen units to millions, depending on the complexity required to learn hidden patterns in the data. Typically, an ANN includes an input layer, one or more hidden layers, and an output layer. The input layer receives external data for analysis, which is then processed through the hidden layers that transform the input into valuable information for the output layer. The output layer then generates a response based on the processed data.</p>
@@ -764,12 +760,12 @@ torch.Size([15, 2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[102.,  43.,  37.],
-        [ 73.,  67.,  43.],
-        [102.,  43.,  37.]])
-tensor([[22., 37.],
-        [56., 70.],
-        [22., 37.]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 91.,  88.,  64.],
+        [102.,  43.,  37.],
+        [ 87., 134.,  58.]])
+tensor([[ 81., 101.],
+        [ 22.,  37.],
+        [119., 133.]])
 </pre></div>
 </div>
 </div>
@@ -794,11 +790,11 @@ tensor([[22., 37.],
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter containing:
-tensor([[ 0.5262, -0.4292,  0.1640],
-        [-0.2467, -0.1337,  0.0115]], requires_grad=True)
+tensor([[-0.0092,  0.1423,  0.5002],
+        [ 0.1088,  0.0923,  0.3803]], requires_grad=True)
 torch.Size([2, 3])
 Parameter containing:
-tensor([0.0397, 0.4630], requires_grad=True)
+tensor([-0.3465,  0.5074], requires_grad=True)
 torch.Size([2])
 </pre></div>
 </div>
@@ -816,10 +812,10 @@ torch.Size([2])
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Parameter containing:
- tensor([[ 0.5262, -0.4292,  0.1640],
-         [-0.2467, -0.1337,  0.0115]], requires_grad=True),
+ tensor([[-0.0092,  0.1423,  0.5002],
+         [ 0.1088,  0.0923,  0.3803]], requires_grad=True),
  Parameter containing:
- tensor([0.0397, 0.4630], requires_grad=True)]
+ tensor([-0.3465,  0.5074], requires_grad=True)]
 </pre></div>
 </div>
 </div>
@@ -847,21 +843,21 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 16.7421, -26.0055],
-        [ 20.6428, -33.0112],
-        [ -2.1912, -38.2417],
-        [ 41.3190, -30.0207],
-        [  6.6171, -28.5843],
-        [ 16.7421, -26.0055],
-        [ 20.6428, -33.0112],
-        [ -2.1912, -38.2417],
-        [ 41.3190, -30.0207],
-        [  6.6171, -28.5843],
-        [ 16.7421, -26.0055],
-        [ 20.6428, -33.0112],
-        [ -2.1912, -38.2417],
-        [ 41.3190, -30.0207],
-        [  6.6171, -28.5843]], grad_fn=&lt;AddmmBackward0&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[30.0196, 30.9854],
+        [43.3450, 42.8677],
+        [46.9256, 44.3950],
+        [23.3360, 29.6454],
+        [47.6875, 43.4933],
+        [30.0196, 30.9854],
+        [43.3450, 42.8677],
+        [46.9256, 44.3950],
+        [23.3360, 29.6454],
+        [47.6875, 43.4933],
+        [30.0196, 30.9854],
+        [43.3450, 42.8677],
+        [46.9256, 44.3950],
+        [23.3360, 29.6454],
+        [47.6875, 43.4933]], grad_fn=&lt;AddmmBackward0&gt;)
 </pre></div>
 </div>
 </div>
@@ -887,8 +883,8 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor(11230.7061, grad_fn=&lt;MseLossBackward0&gt;)
-11230.7060546875
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor(2885.6558, grad_fn=&lt;MseLossBackward0&gt;)
+2885.65576171875
 </pre></div>
 </div>
 </div>
@@ -958,16 +954,16 @@ torch.Size([2])
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [10/100], Loss: 1393.8750
-Epoch [20/100], Loss: 20172.8809
-Epoch [30/100], Loss: 6130.3560
-Epoch [40/100], Loss: 130.1848
-Epoch [50/100], Loss: 677.5463
-Epoch [60/100], Loss: 668.6168
-Epoch [70/100], Loss: 817.3528
-Epoch [80/100], Loss: 19035.2480
-Epoch [90/100], Loss: 65.8067
-Epoch [100/100], Loss: 1914.5448
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [10/100], Loss: 39.4738
+Epoch [20/100], Loss: 357.6736
+Epoch [30/100], Loss: 385.5547
+Epoch [40/100], Loss: 16042.1758
+Epoch [50/100], Loss: 2540.5823
+Epoch [60/100], Loss: 58.5337
+Epoch [70/100], Loss: 12.2660
+Epoch [80/100], Loss: 476.8752
+Epoch [90/100], Loss: 6.5189
+Epoch [100/100], Loss: 11.5956
 </pre></div>
 </div>
 </div>
@@ -982,7 +978,7 @@ Epoch [100/100], Loss: 1914.5448
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27903.744140625
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.75567889213562
 </pre></div>
 </div>
 </div>
@@ -1027,7 +1023,7 @@ Epoch [100/100], Loss: 1914.5448
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 1</p>
+        <p class="prev-next-title">Lecture 1 - Foundational Concept of Deep Learning</p>
       </div>
     </a>
     <a class="right-next"
@@ -1035,7 +1031,7 @@ Epoch [100/100], Loss: 1914.5448
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 3</p>
+        <p class="prev-next-title">Lecture 3 - PyTorch Tensor Objects Attributes and Methods</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1055,7 +1051,6 @@ Epoch [100/100], Loss: 1914.5448
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-understanding-deep-learning">II. Understanding Deep Learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#artificial-neural-network">Artificial Neural Network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedforward-neural-network">Feedforward Neural Network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backward-propagation-of-errors">Backward Propagation of Errors</a></li>

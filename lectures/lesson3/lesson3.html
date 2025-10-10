@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Lecture 3 &#8212; My JupyterBook</title>
+    <title>Lecture 3 - PyTorch Tensor Objects Attributes and Methods &#8212; My JupyterBook</title>
   
   
   
@@ -63,8 +63,8 @@
     <link rel="canonical" href="/my-jupyter-book/lectures/lesson3/lesson3.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Lecture 4" href="../lesson4/lesson4.html" />
-    <link rel="prev" title="Lecture 2" href="../lesson2/lesson2.html" />
+    <link rel="next" title="Lecture 4 - Main Types of Deep Learning Neural Networks" href="../lesson4/lesson4.html" />
+    <link rel="prev" title="Lecture 2 - Understanding Deep Learning" href="../lesson2/lesson2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,12 +184,12 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lesson1/lesson1.html">Lecture 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson2/lesson2.html">Lecture 2</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson4/lesson4.html">Lecture 4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson5/lesson5.html">Lecture 5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html">Lecture 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/lesson1.html">Lecture 1 - Foundational Concept of Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/lesson2.html">Lecture 2 - Understanding Deep Learning</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 3 - PyTorch Tensor Objects Attributes and Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/lesson4.html">Lecture 4 - Main Types of Deep Learning Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson5/lesson5.html">Lecture 5 - Applications of Deep Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson6/lesson6.html">Lecture 6 - Training CNN Model using MNIST Dataset</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="nav bd-sidenav">
@@ -393,7 +393,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 3</h1>
+    <h1>Lecture 3 - PyTorch Tensor Objects Attributes and Methods</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -403,27 +403,24 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pytorch-tensor-objects-attributes-and-methods">PyTorch Tensor Objects Attributes and Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numpy-arrays-to-pytorch-tensors">1. Converting NumPy arrays to PyTorch tensors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tensors-from-scratch">2. Creating tensors from scratch</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uninitialized-tensors-with-empty">Uninitialized tensors with <code class="docutils literal notranslate"><span class="pre">.empty()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initialized-tensors-with-zeros-and-ones">Initialized tensors with <code class="docutils literal notranslate"><span class="pre">.zeros()</span></code> and <code class="docutils literal notranslate"><span class="pre">.ones()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tensors-from-ranges">Tensors from ranges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numpy-arrays-to-pytorch-tensors">1. Converting NumPy arrays to PyTorch tensors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tensors-from-scratch">2. Creating tensors from scratch</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uninitialized-tensors-with-empty">Uninitialized tensors with <code class="docutils literal notranslate"><span class="pre">.empty()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialized-tensors-with-zeros-and-ones">Initialized tensors with <code class="docutils literal notranslate"><span class="pre">.zeros()</span></code> and <code class="docutils literal notranslate"><span class="pre">.ones()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensors-from-ranges">Tensors from ranges</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing">3. Indexing and Slicing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape-tensors-with-view">4. Reshape tensors with .view()</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-arithmetic">5. Tensor Arithmetic</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-tensor-operations"><strong>Basic Tensor Operations</strong></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic">ARITHMETIC</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monomial-operations">MONOMIAL OPERATIONS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">SUMMARY STATISTICS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing">3. Indexing and Slicing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape-tensors-with-view">4. Reshape tensors with .view()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-arithmetic">5. Tensor Arithmetic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-tensor-operations"><strong>Basic Tensor Operations</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic">ARITHMETIC</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monomial-operations">MONOMIAL OPERATIONS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">SUMMARY STATISTICS</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-products">6. Dot Products</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">7. Matrix Multiplication</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-products">6. Dot Products</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">7. Matrix Multiplication</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-operations">8. Additional Operations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l2-or-euclidean-norm">L2 or Euclidean Norm</a></li>
 </ul>
@@ -439,10 +436,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-3">
-<h1>Lecture 3<a class="headerlink" href="#lecture-3" title="Link to this heading">#</a></h1>
-<section id="pytorch-tensor-objects-attributes-and-methods">
-<h2>PyTorch Tensor Objects Attributes and Methods<a class="headerlink" href="#pytorch-tensor-objects-attributes-and-methods" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-3-pytorch-tensor-objects-attributes-and-methods">
+<h1>Lecture 3 - PyTorch Tensor Objects Attributes and Methods<a class="headerlink" href="#lecture-3-pytorch-tensor-objects-attributes-and-methods" title="Link to this heading">#</a></h1>
 <p>This will cover the following operations of a tensor object:</p>
 <ul class="simple">
 <li><p>Converting NumPy arrays to PyTorch tensors</p></li>
@@ -457,7 +452,7 @@ document.write(`
 <p><img alt="Tensor Operations" src="../../_images/tensor.png" /></p>
 <p>In PyTorch, we use tensors to encode the inputs and outputs of a model, as well as the model’s parameters. Tensors are similar to NumPy’s ndarrays, except that tensors can run on GPUs or other specialized hardware to accelerate computing.</p>
 <section id="converting-numpy-arrays-to-pytorch-tensors">
-<h3>1. Converting NumPy arrays to PyTorch tensors<a class="headerlink" href="#converting-numpy-arrays-to-pytorch-tensors" title="Link to this heading">#</a></h3>
+<h2>1. Converting NumPy arrays to PyTorch tensors<a class="headerlink" href="#converting-numpy-arrays-to-pytorch-tensors" title="Link to this heading">#</a></h2>
 <p>A <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code> is a multi-dimensional matrix containing elements of a single data type. Calculations between tensors can only happen if the tensors share the same dtype. In some cases tensors are used as a replacement for NumPy to use the power of GPUs (more on this later). Let’s try to initialize a NumPy array first!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -580,17 +575,17 @@ torch.DoubleTensor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.066 0.592 0.515 0.166 0.551]
- [0.868 0.432 0.386 0.432 0.125]
- [0.837 0.895 0.143 0.652 0.077]
- [0.069 0.147 0.675 0.017 0.892]
- [0.607 0.415 0.556 0.256 0.442]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.544 0.782 0.61  0.548 0.101]
+ [0.329 0.354 0.96  0.91  0.844]
+ [0.742 0.618 0.076 0.974 0.451]
+ [0.149 0.294 0.394 0.688 0.57 ]
+ [0.683 0.987 0.775 0.133 0.646]]
 &lt;class &#39;numpy.matrix&#39;&gt;
-tensor([[0.0660, 0.5920, 0.5150, 0.1660, 0.5510],
-        [0.8680, 0.4320, 0.3860, 0.4320, 0.1250],
-        [0.8370, 0.8950, 0.1430, 0.6520, 0.0770],
-        [0.0690, 0.1470, 0.6750, 0.0170, 0.8920],
-        [0.6070, 0.4150, 0.5560, 0.2560, 0.4420]], dtype=torch.float64)
+tensor([[0.5440, 0.7820, 0.6100, 0.5480, 0.1010],
+        [0.3290, 0.3540, 0.9600, 0.9100, 0.8440],
+        [0.7420, 0.6180, 0.0760, 0.9740, 0.4510],
+        [0.1490, 0.2940, 0.3940, 0.6880, 0.5700],
+        [0.6830, 0.9870, 0.7750, 0.1330, 0.6460]], dtype=torch.float64)
 &lt;class &#39;torch.Tensor&#39;&gt;
 </pre></div>
 </div>
@@ -703,9 +698,9 @@ tensor([[0.0660, 0.5920, 0.5150, 0.1660, 0.5510],
 </div>
 </section>
 <section id="creating-tensors-from-scratch">
-<h3>2. Creating tensors from scratch<a class="headerlink" href="#creating-tensors-from-scratch" title="Link to this heading">#</a></h3>
+<h2>2. Creating tensors from scratch<a class="headerlink" href="#creating-tensors-from-scratch" title="Link to this heading">#</a></h2>
 <section id="uninitialized-tensors-with-empty">
-<h4>Uninitialized tensors with <code class="docutils literal notranslate"><span class="pre">.empty()</span></code><a class="headerlink" href="#uninitialized-tensors-with-empty" title="Link to this heading">#</a></h4>
+<h3>Uninitialized tensors with <code class="docutils literal notranslate"><span class="pre">.empty()</span></code><a class="headerlink" href="#uninitialized-tensors-with-empty" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">torch.empty()</span></code> returns an uninitialized tensor. Essentially a block of memory is allocated according to the size of the tensor, and any values already sitting in the block are returned. This is similar to the behavior of <code class="docutils literal notranslate"><span class="pre">numpy.empty()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -725,7 +720,7 @@ tensor([[0.0660, 0.5920, 0.5150, 0.1660, 0.5510],
 </div>
 </section>
 <section id="initialized-tensors-with-zeros-and-ones">
-<h4>Initialized tensors with <code class="docutils literal notranslate"><span class="pre">.zeros()</span></code> and <code class="docutils literal notranslate"><span class="pre">.ones()</span></code><a class="headerlink" href="#initialized-tensors-with-zeros-and-ones" title="Link to this heading">#</a></h4>
+<h3>Initialized tensors with <code class="docutils literal notranslate"><span class="pre">.zeros()</span></code> and <code class="docutils literal notranslate"><span class="pre">.ones()</span></code><a class="headerlink" href="#initialized-tensors-with-zeros-and-ones" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">torch.zeros(size)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">torch.ones(size)</span></code></p></li>
@@ -765,7 +760,7 @@ tensor([[0.0660, 0.5920, 0.5150, 0.1660, 0.5510],
 </div>
 </section>
 <section id="tensors-from-ranges">
-<h4>Tensors from ranges<a class="headerlink" href="#tensors-from-ranges" title="Link to this heading">#</a></h4>
+<h3>Tensors from ranges<a class="headerlink" href="#tensors-from-ranges" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">torch.arange(start,</span> <span class="pre">end,</span> <span class="pre">step)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">torch.linspace(start,</span> <span class="pre">end,</span> <span class="pre">steps)</span></code></p></li>
@@ -876,10 +871,10 @@ New: torch.LongTensor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[0.9505, 0.4530, 0.4816],
-        [0.1997, 0.0178, 0.1055],
-        [0.0030, 0.2823, 0.5674],
-        [0.9099, 0.6848, 0.8447]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[0.2139, 0.7007, 0.1324],
+        [0.9461, 0.6785, 0.3930],
+        [0.2433, 0.0823, 0.9016],
+        [0.9707, 0.5764, 0.8985]])
 </pre></div>
 </div>
 </div>
@@ -892,10 +887,10 @@ New: torch.LongTensor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.1059, -1.6035,  1.7750],
-        [-0.6019, -0.8168, -0.2045],
-        [-1.2730, -0.0813,  0.0533],
-        [ 0.1300, -0.7800,  0.1075]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.9566,  0.2390,  0.6511],
+        [-0.8775,  0.5308, -2.3579],
+        [-0.3040, -0.4947, -0.0284],
+        [ 0.8211,  0.3174, -0.5373]])
 </pre></div>
 </div>
 </div>
@@ -927,8 +922,8 @@ New: torch.LongTensor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 1.4121, -0.2315,  1.3641,  0.5328,  0.9771],
-        [-0.5978,  2.2264,  1.3330,  0.5337, -2.6330]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.3302, -0.0640,  1.1905, -0.5030, -0.4333],
+        [ 0.3119, -0.0684,  0.2755,  0.7522,  0.0380]])
 </pre></div>
 </div>
 </div>
@@ -1051,7 +1046,7 @@ New: torch.LongTensor
 </section>
 </section>
 <section id="indexing-and-slicing">
-<h3>3. Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Link to this heading">#</a></h3>
+<h2>3. Indexing and Slicing<a class="headerlink" href="#indexing-and-slicing" title="Link to this heading">#</a></h2>
 <p>Extracting specific values from a tensor works just the same as with NumPy arrays.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1098,7 +1093,7 @@ New: torch.LongTensor
 </div>
 </section>
 <section id="reshape-tensors-with-view">
-<h3>4. Reshape tensors with .view()<a class="headerlink" href="#reshape-tensors-with-view" title="Link to this heading">#</a></h3>
+<h2>4. Reshape tensors with .view()<a class="headerlink" href="#reshape-tensors-with-view" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">view()</span></code> and <code class="docutils literal notranslate"><span class="pre">reshape()</span></code> do essentially the same thing by returning a reshaped tensor without changing the original tensor in place.
 There’s a good discussion of the differences here.</p>
 <div class="cell docutils container">
@@ -1199,7 +1194,7 @@ There’s a good discussion of the differences here.</p>
 </div>
 </section>
 <section id="tensor-arithmetic">
-<h3>5. Tensor Arithmetic<a class="headerlink" href="#tensor-arithmetic" title="Link to this heading">#</a></h3>
+<h2>5. Tensor Arithmetic<a class="headerlink" href="#tensor-arithmetic" title="Link to this heading">#</a></h2>
 <p>Adding tensors can be performed a few different ways depending on the desired result.
 As a simple expression:</p>
 <div class="cell docutils container">
@@ -1214,9 +1209,6 @@ As a simple expression:</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([5., 7., 9.])
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <p>As arguments passed into a torch operation:</p>
@@ -1228,9 +1220,6 @@ As a simple expression:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([5., 7., 9.])
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1266,10 +1255,10 @@ As a simple expression:</p>
 <p><code class="docutils literal notranslate"><span class="pre">NOTE:</span></code> Any operation that changes a tensor in-place is post-fixed with an underscore <em>.
 In the above example: a.add</em>(b) changed a.</p>
 <section id="basic-tensor-operations">
-<h4><strong>Basic Tensor Operations</strong><a class="headerlink" href="#basic-tensor-operations" title="Link to this heading">#</a></h4>
+<h3><strong>Basic Tensor Operations</strong><a class="headerlink" href="#basic-tensor-operations" title="Link to this heading">#</a></h3>
 </section>
 <section id="arithmetic">
-<h4>ARITHMETIC<a class="headerlink" href="#arithmetic" title="Link to this heading">#</a></h4>
+<h3>ARITHMETIC<a class="headerlink" href="#arithmetic" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operation</p></th>
@@ -1307,7 +1296,7 @@ In the above example: a.add</em>(b) changed a.</p>
 </div>
 </section>
 <section id="monomial-operations">
-<h4>MONOMIAL OPERATIONS<a class="headerlink" href="#monomial-operations" title="Link to this heading">#</a></h4>
+<h3>MONOMIAL OPERATIONS<a class="headerlink" href="#monomial-operations" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operation</p></th>
@@ -1349,7 +1338,7 @@ In the above example: a.add</em>(b) changed a.</p>
 </div>
 </section>
 <section id="summary-statistics">
-<h4>SUMMARY STATISTICS<a class="headerlink" href="#summary-statistics" title="Link to this heading">#</a></h4>
+<h3>SUMMARY STATISTICS<a class="headerlink" href="#summary-statistics" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operation</p></th>
@@ -1382,7 +1371,7 @@ In the above example: a.add</em>(b) changed a.</p>
 </section>
 </section>
 <section id="dot-products">
-<h3>6. Dot Products<a class="headerlink" href="#dot-products" title="Link to this heading">#</a></h3>
+<h2>6. Dot Products<a class="headerlink" href="#dot-products" title="Link to this heading">#</a></h2>
 <p>A dot product is the sum of the products of the corresponding entries of two 1D tensors. If the tensors are both vectors, the dot product is given as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1411,7 +1400,7 @@ In the above example: a.add</em>(b) changed a.</p>
 <p><code class="docutils literal notranslate"><span class="pre">NOTE:</span></code> There’s a slight difference between torch.dot() and numpy.dot(). While torch.dot() only accepts 1D arguments and returns a dot product, numpy.dot() also accepts 2D arguments and performs matrix multiplication. We show matrix multiplication below.</p>
 </section>
 <section id="matrix-multiplication">
-<h3>7. Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Link to this heading">#</a></h3>
+<h2>7. Matrix Multiplication<a class="headerlink" href="#matrix-multiplication" title="Link to this heading">#</a></h2>
 <p>2D Matrix multiplication is possible when the number of columns in tensor A matches the number of rows in tensor B. In this case, the product of tensor A with size <span class="math notranslate nohighlight">\((x, y)\)</span> and tensor B with size <span class="math notranslate nohighlight">\((y, z)\)</span> results in a tensor of size <span class="math notranslate nohighlight">\((x, z)\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1451,7 +1440,9 @@ r &amp; s
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a:  torch.Size([2, 3])
 b:  torch.Size([3, 2])
-a x b:  torch.Size([2, 2])
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a x b:  torch.Size([2, 2])
 </pre></div>
 </div>
 </div>
@@ -1557,7 +1548,6 @@ a x b:  torch.Size([2, 2])
 </div>
 </div>
 </section>
-</section>
 <section id="additional-operations">
 <h2>8. Additional Operations<a class="headerlink" href="#additional-operations" title="Link to this heading">#</a></h2>
 <section id="l2-or-euclidean-norm">
@@ -1639,7 +1629,7 @@ a x b:  torch.Size([2, 2])
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 2</p>
+        <p class="prev-next-title">Lecture 2 - Understanding Deep Learning</p>
       </div>
     </a>
     <a class="right-next"
@@ -1647,7 +1637,7 @@ a x b:  torch.Size([2, 2])
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 4</p>
+        <p class="prev-next-title">Lecture 4 - Main Types of Deep Learning Neural Networks</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1667,27 +1657,24 @@ a x b:  torch.Size([2, 2])
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pytorch-tensor-objects-attributes-and-methods">PyTorch Tensor Objects Attributes and Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numpy-arrays-to-pytorch-tensors">1. Converting NumPy arrays to PyTorch tensors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tensors-from-scratch">2. Creating tensors from scratch</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uninitialized-tensors-with-empty">Uninitialized tensors with <code class="docutils literal notranslate"><span class="pre">.empty()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#initialized-tensors-with-zeros-and-ones">Initialized tensors with <code class="docutils literal notranslate"><span class="pre">.zeros()</span></code> and <code class="docutils literal notranslate"><span class="pre">.ones()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tensors-from-ranges">Tensors from ranges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-numpy-arrays-to-pytorch-tensors">1. Converting NumPy arrays to PyTorch tensors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-tensors-from-scratch">2. Creating tensors from scratch</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uninitialized-tensors-with-empty">Uninitialized tensors with <code class="docutils literal notranslate"><span class="pre">.empty()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialized-tensors-with-zeros-and-ones">Initialized tensors with <code class="docutils literal notranslate"><span class="pre">.zeros()</span></code> and <code class="docutils literal notranslate"><span class="pre">.ones()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensors-from-ranges">Tensors from ranges</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing">3. Indexing and Slicing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape-tensors-with-view">4. Reshape tensors with .view()</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-arithmetic">5. Tensor Arithmetic</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-tensor-operations"><strong>Basic Tensor Operations</strong></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic">ARITHMETIC</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monomial-operations">MONOMIAL OPERATIONS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">SUMMARY STATISTICS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing">3. Indexing and Slicing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reshape-tensors-with-view">4. Reshape tensors with .view()</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tensor-arithmetic">5. Tensor Arithmetic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-tensor-operations"><strong>Basic Tensor Operations</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic">ARITHMETIC</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monomial-operations">MONOMIAL OPERATIONS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">SUMMARY STATISTICS</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-products">6. Dot Products</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">7. Matrix Multiplication</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-products">6. Dot Products</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-multiplication">7. Matrix Multiplication</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-operations">8. Additional Operations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l2-or-euclidean-norm">L2 or Euclidean Norm</a></li>
 </ul>
