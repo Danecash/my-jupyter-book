@@ -15,6 +15,10 @@ parts:
       - file: exercises/exercise-1-python-basics
   - caption: Labs
     chapters:
+      - file: labs/Laboratory Activty 1
+      - file: labs/Laboratory Activty 2
+      - file: labs/Laboratory Activity 3
+      - file: labs/Laboratory Activity 4
       - file: labs/lab-5-pytorch-intro
       - file: labs/Laboratory_Activty
   - caption: Group Projects
