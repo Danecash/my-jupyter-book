@@ -404,7 +404,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inputs-and-weights"><strong>Define Inputs and Weights</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-pass-hidden-pre-activation-z-hidden"><strong>Forward Pass – Hidden Pre-Activation (<code class="docutils literal notranslate"><span class="pre">z_hidden</span></code>)</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-activation-using-relu-a-hidden"><strong>Hidden Activation using ReLU (<code class="docutils literal notranslate"><span class="pre">a_hidden</span></code>)</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cell-4-output-pre-activation-z-out-and-prediction-y"><strong>Cell 4: Output Pre-Activation (<code class="docutils literal notranslate"><span class="pre">z_out</span></code>) and Prediction (<code class="docutils literal notranslate"><span class="pre">ŷ</span></code>)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-pre-activation-z-out-and-prediction-y"><strong>Output Pre-Activation (<code class="docutils literal notranslate"><span class="pre">z_out</span></code>) and Prediction (<code class="docutils literal notranslate"><span class="pre">ŷ</span></code>)</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-loss-mean-squared-error"><strong>Compute Loss (Mean Squared Error)</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backpropagation-gradients-at-output-layer"><strong>Backpropagation – Gradients at Output Layer</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backpropagate-to-hidden-layer"><strong>Backpropagate to Hidden Layer</strong></a></li>
@@ -541,8 +541,8 @@ a_{hidden} = \max(0, z_{hidden})
 <li><p>The <strong>ReLU derivative</strong> is <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0]</span></code>, meaning no gradient will flow backward through these neurons — they are “inactive.”</p></li>
 </ul>
 </section>
-<section id="cell-4-output-pre-activation-z-out-and-prediction-y">
-<h2><strong>Cell 4: Output Pre-Activation (<code class="docutils literal notranslate"><span class="pre">z_out</span></code>) and Prediction (<code class="docutils literal notranslate"><span class="pre">ŷ</span></code>)</strong><a class="headerlink" href="#cell-4-output-pre-activation-z-out-and-prediction-y" title="Link to this heading">#</a></h2>
+<section id="output-pre-activation-z-out-and-prediction-y">
+<h2><strong>Output Pre-Activation (<code class="docutils literal notranslate"><span class="pre">z_out</span></code>) and Prediction (<code class="docutils literal notranslate"><span class="pre">ŷ</span></code>)</strong><a class="headerlink" href="#output-pre-activation-z-out-and-prediction-y" title="Link to this heading">#</a></h2>
 <p>We now compute the <strong>output neuron’s pre-activation</strong> value using the output layer parameters (<code class="docutils literal notranslate"><span class="pre">theta</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -878,7 +878,7 @@ Also, the output error is large because prediction (-0.4) is far from target (1)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-inputs-and-weights"><strong>Define Inputs and Weights</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forward-pass-hidden-pre-activation-z-hidden"><strong>Forward Pass – Hidden Pre-Activation (<code class="docutils literal notranslate"><span class="pre">z_hidden</span></code>)</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-activation-using-relu-a-hidden"><strong>Hidden Activation using ReLU (<code class="docutils literal notranslate"><span class="pre">a_hidden</span></code>)</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cell-4-output-pre-activation-z-out-and-prediction-y"><strong>Cell 4: Output Pre-Activation (<code class="docutils literal notranslate"><span class="pre">z_out</span></code>) and Prediction (<code class="docutils literal notranslate"><span class="pre">ŷ</span></code>)</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#output-pre-activation-z-out-and-prediction-y"><strong>Output Pre-Activation (<code class="docutils literal notranslate"><span class="pre">z_out</span></code>) and Prediction (<code class="docutils literal notranslate"><span class="pre">ŷ</span></code>)</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-loss-mean-squared-error"><strong>Compute Loss (Mean Squared Error)</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backpropagation-gradients-at-output-layer"><strong>Backpropagation – Gradients at Output Layer</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backpropagate-to-hidden-layer"><strong>Backpropagate to Hidden Layer</strong></a></li>
