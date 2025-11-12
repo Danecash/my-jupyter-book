@@ -21,6 +21,7 @@ parts:
       - file: labs/Laboratory Activity 4
       - file: labs/lab-5-pytorch-intro
       - file: labs/Laboratory_Activty
+      - file: labs/Lab Activity 201
   - caption: Group Projects
     chapters:
       - file: group-activities/resources
