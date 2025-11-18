@@ -26,3 +26,6 @@ parts:
     chapters:
       - file: group-activities/resources
       - file: group-activities/temporal
+  - caption: Deep Learning Blog Post
+    chapters:
+      - file: Blog_Post/homework_201
