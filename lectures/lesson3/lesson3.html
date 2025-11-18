@@ -178,7 +178,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../intro.html">
-                    Welcome to your Jupyter Book
+                    The Portfolio of Dane Casiño
                 </a>
             </li>
         </ul>
@@ -209,6 +209,10 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../group-activities/resources.html">Group Activities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../group-activities/temporal.html">Applying Temporal Fusion Transformers for Air Quality Forecasting in Metro Manila</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning Blog Post</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Blog_Post/homework_201.html">Adam Unchained: Breaking Free from Default Parameters</a></li>
 </ul>
 
     </div>
@@ -576,17 +580,17 @@ torch.DoubleTensor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.821 0.492 0.316 0.808 0.976]
- [0.455 0.082 0.162 0.644 0.837]
- [0.351 0.001 0.768 0.299 0.872]
- [0.367 0.119 0.941 0.645 0.869]
- [0.88  0.418 0.486 0.164 0.096]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.016 0.653 0.203 0.934 0.356]
+ [0.854 0.828 0.92  0.188 0.184]
+ [0.082 0.257 0.187 0.007 0.177]
+ [0.942 0.389 0.266 0.975 0.792]
+ [0.354 0.905 0.926 0.804 0.831]]
 &lt;class &#39;numpy.matrix&#39;&gt;
-tensor([[0.8210, 0.4920, 0.3160, 0.8080, 0.9760],
-        [0.4550, 0.0820, 0.1620, 0.6440, 0.8370],
-        [0.3510, 0.0010, 0.7680, 0.2990, 0.8720],
-        [0.3670, 0.1190, 0.9410, 0.6450, 0.8690],
-        [0.8800, 0.4180, 0.4860, 0.1640, 0.0960]], dtype=torch.float64)
+tensor([[0.0160, 0.6530, 0.2030, 0.9340, 0.3560],
+        [0.8540, 0.8280, 0.9200, 0.1880, 0.1840],
+        [0.0820, 0.2570, 0.1870, 0.0070, 0.1770],
+        [0.9420, 0.3890, 0.2660, 0.9750, 0.7920],
+        [0.3540, 0.9050, 0.9260, 0.8040, 0.8310]], dtype=torch.float64)
 &lt;class &#39;torch.Tensor&#39;&gt;
 </pre></div>
 </div>
@@ -711,10 +715,10 @@ tensor([[0.8210, 0.4920, 0.3160, 0.8080, 0.9760],
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[0., 0., 0.],
-        [0., 0., 0.],
-        [0., 0., 0.],
-        [0., 0., 0.]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[1.4526e+17, 1.8932e-42, 0.0000e+00],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00],
+        [0.0000e+00, 0.0000e+00, 0.0000e+00]])
 </pre></div>
 </div>
 </div>
@@ -872,10 +876,10 @@ New: torch.LongTensor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[0.9552, 0.1248, 0.6122],
-        [0.8732, 0.8698, 0.6912],
-        [0.1911, 0.2481, 0.5827],
-        [0.4918, 0.3996, 0.7713]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[0.2297, 0.7386, 0.4231],
+        [0.5927, 0.2513, 0.0755],
+        [0.4327, 0.2678, 0.0870],
+        [0.0355, 0.2860, 0.7256]])
 </pre></div>
 </div>
 </div>
@@ -888,10 +892,10 @@ New: torch.LongTensor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.4896, -0.6407,  3.1851],
-        [-0.5948,  1.1056,  0.0879],
-        [-0.2918, -0.2601, -0.7130],
-        [-1.3579,  1.0266, -1.2432]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.3246,  1.1224, -2.9254],
+        [-0.2639,  0.5547, -0.1058],
+        [-0.0035,  0.0032, -0.4631],
+        [ 1.1588,  0.9415,  1.2453]])
 </pre></div>
 </div>
 </div>
@@ -923,8 +927,8 @@ New: torch.LongTensor
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-1.4046e+00, -3.4885e-01, -4.3303e-01, -2.7777e-04, -2.8958e-01],
-        [-1.1062e+00,  1.2982e+00,  9.1968e-01,  4.5192e-01, -1.3520e+00]])
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.7681, -0.2575, -0.7487, -1.1270, -0.6189],
+        [-0.3301, -0.8106, -2.0585,  0.4826,  0.3774]])
 </pre></div>
 </div>
 </div>
@@ -1223,9 +1227,6 @@ As a simple expression:</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([5., 7., 9.])
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <p>With an output tensor passed in as an argument:</p>
@@ -1501,9 +1502,6 @@ a x b:  torch.Size([2, 2])
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>torch.Size([2, 3, 5])
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>

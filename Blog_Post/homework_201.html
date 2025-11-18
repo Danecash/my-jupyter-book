@@ -801,134 +801,16 @@ Data preprocessing completed!
   Training with learning rate: 0.0001 (1/4)
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">15</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">lr</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>                   <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;sparse_categorical_crossentropy&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>                   <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
-<span class="ne">---&gt; </span><span class="mi">15</span>     <span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> 
-<span class="g g-Whitespace">     </span><span class="mi">16</span>                        <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>  
-<span class="g g-Whitespace">     </span><span class="mi">17</span>                        <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>                        <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">histories</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;lr_</span><span class="si">{</span><span class="n">lr</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">history</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Experiment 1 completed!&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\keras\src\utils\traceback_utils.py:117,</span> in <span class="ni">filter_traceback.&lt;locals&gt;.error_handler</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="n">filtered_tb</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">116</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">117</span>     <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">118</span> <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">119</span>     <span class="n">filtered_tb</span> <span class="o">=</span> <span class="n">_process_traceback_frames</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">)</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\keras\src\backend\tensorflow\trainer.py:399,</span> in <span class="ni">TensorFlowTrainer.fit</span><span class="nt">(self, x, y, batch_size, epochs, verbose, callbacks, validation_split, validation_data, shuffle, class_weight, sample_weight, initial_epoch, steps_per_epoch, validation_steps, validation_batch_size, validation_freq)</span>
-<span class="g g-Whitespace">    </span><span class="mi">397</span> <span class="k">for</span> <span class="n">begin_step</span><span class="p">,</span> <span class="n">end_step</span><span class="p">,</span> <span class="n">iterator</span> <span class="ow">in</span> <span class="n">epoch_iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">398</span>     <span class="n">callbacks</span><span class="o">.</span><span class="n">on_train_batch_begin</span><span class="p">(</span><span class="n">begin_step</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">399</span>     <span class="n">logs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_function</span><span class="p">(</span><span class="n">iterator</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">400</span>     <span class="n">callbacks</span><span class="o">.</span><span class="n">on_train_batch_end</span><span class="p">(</span><span class="n">end_step</span><span class="p">,</span> <span class="n">logs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">401</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_training</span><span class="p">:</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\keras\src\backend\tensorflow\trainer.py:241,</span> in <span class="ni">TensorFlowTrainer._make_function.&lt;locals&gt;.function</span><span class="nt">(iterator)</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span> <span class="k">def</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">iterator</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">238</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">239</span>         <span class="n">iterator</span><span class="p">,</span> <span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Iterator</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">distribute</span><span class="o">.</span><span class="n">DistributedIterator</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">240</span>     <span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">241</span>         <span class="n">opt_outputs</span> <span class="o">=</span> <span class="n">multi_step_on_iterator</span><span class="p">(</span><span class="n">iterator</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">opt_outputs</span><span class="o">.</span><span class="n">has_value</span><span class="p">():</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span>             <span class="k">raise</span> <span class="ne">StopIteration</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py:150,</span> in <span class="ni">filter_traceback.&lt;locals&gt;.error_handler</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">148</span> <span class="n">filtered_tb</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">149</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">150</span>   <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span> <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">152</span>   <span class="n">filtered_tb</span> <span class="o">=</span> <span class="n">_process_traceback_frames</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">)</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py:833,</span> in <span class="ni">Function.__call__</span><span class="nt">(self, *args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">830</span> <span class="n">compiler</span> <span class="o">=</span> <span class="s2">&quot;xla&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_jit_compile</span> <span class="k">else</span> <span class="s2">&quot;nonXla&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">832</span> <span class="k">with</span> <span class="n">OptionalXlaContext</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_jit_compile</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">833</span>   <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">835</span> <span class="n">new_tracing_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experimental_get_tracing_count</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">836</span> <span class="n">without_tracing</span> <span class="o">=</span> <span class="p">(</span><span class="n">tracing_count</span> <span class="o">==</span> <span class="n">new_tracing_count</span><span class="p">)</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py:878,</span> in <span class="ni">Function._call</span><span class="nt">(self, *args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">875</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">876</span> <span class="c1"># In this case we have not created variables on the first call. So we can</span>
-<span class="g g-Whitespace">    </span><span class="mi">877</span> <span class="c1"># run the first trace but we should fail if variables are created.</span>
-<span class="ne">--&gt; </span><span class="mi">878</span> <span class="n">results</span> <span class="o">=</span> <span class="n">tracing_compilation</span><span class="o">.</span><span class="n">call_function</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">879</span>     <span class="n">args</span><span class="p">,</span> <span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variable_creation_config</span>
-<span class="g g-Whitespace">    </span><span class="mi">880</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">881</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created_variables</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">882</span>   <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Creating variables on a non-first call to a function&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">883</span>                    <span class="s2">&quot; decorated with tf.function.&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py:139,</span> in <span class="ni">call_function</span><span class="nt">(args, kwargs, tracing_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span> <span class="n">bound_args</span> <span class="o">=</span> <span class="n">function</span><span class="o">.</span><span class="n">function_type</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">138</span> <span class="n">flat_inputs</span> <span class="o">=</span> <span class="n">function</span><span class="o">.</span><span class="n">function_type</span><span class="o">.</span><span class="n">unpack_inputs</span><span class="p">(</span><span class="n">bound_args</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">139</span> <span class="k">return</span> <span class="n">function</span><span class="o">.</span><span class="n">_call_flat</span><span class="p">(</span>  <span class="c1"># pylint: disable=protected-access</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span>     <span class="n">flat_inputs</span><span class="p">,</span> <span class="n">captured_inputs</span><span class="o">=</span><span class="n">function</span><span class="o">.</span><span class="n">captured_inputs</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span> <span class="p">)</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py:1322,</span> in <span class="ni">ConcreteFunction._call_flat</span><span class="nt">(self, tensor_inputs, captured_inputs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1318</span> <span class="n">possible_gradient_type</span> <span class="o">=</span> <span class="n">gradients_util</span><span class="o">.</span><span class="n">PossibleTapeGradientTypes</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1319</span> <span class="k">if</span> <span class="p">(</span><span class="n">possible_gradient_type</span> <span class="o">==</span> <span class="n">gradients_util</span><span class="o">.</span><span class="n">POSSIBLE_GRADIENT_TYPES_NONE</span>
-<span class="g g-Whitespace">   </span><span class="mi">1320</span>     <span class="ow">and</span> <span class="n">executing_eagerly</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1321</span>   <span class="c1"># No tape is watching; skip to running the function.</span>
-<span class="ne">-&gt; </span><span class="mi">1322</span>   <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inference_function</span><span class="o">.</span><span class="n">call_preflattened</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1323</span> <span class="n">forward_backward</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_select_forward_and_backward_functions</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1324</span>     <span class="n">args</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1325</span>     <span class="n">possible_gradient_type</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1326</span>     <span class="n">executing_eagerly</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1327</span> <span class="n">forward_function</span><span class="p">,</span> <span class="n">args_with_tangents</span> <span class="o">=</span> <span class="n">forward_backward</span><span class="o">.</span><span class="n">forward</span><span class="p">()</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py:216,</span> in <span class="ni">AtomicFunction.call_preflattened</span><span class="nt">(self, args)</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span> <span class="k">def</span><span class="w"> </span><span class="nf">call_preflattened</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">core</span><span class="o">.</span><span class="n">Tensor</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Calls with flattened tensor inputs and returns the structured output.&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">216</span>   <span class="n">flat_outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">call_flat</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span>   <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">function_type</span><span class="o">.</span><span class="n">pack_output</span><span class="p">(</span><span class="n">flat_outputs</span><span class="p">)</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py:251,</span> in <span class="ni">AtomicFunction.call_flat</span><span class="nt">(self, *args)</span>
-<span class="g g-Whitespace">    </span><span class="mi">249</span> <span class="k">with</span> <span class="n">record</span><span class="o">.</span><span class="n">stop_recording</span><span class="p">():</span>
-<span class="g g-Whitespace">    </span><span class="mi">250</span>   <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bound_context</span><span class="o">.</span><span class="n">executing_eagerly</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">251</span>     <span class="n">outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bound_context</span><span class="o">.</span><span class="n">call_function</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">252</span>         <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">253</span>         <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">254</span>         <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">function_type</span><span class="o">.</span><span class="n">flat_outputs</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">255</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">256</span>   <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">257</span>     <span class="n">outputs</span> <span class="o">=</span> <span class="n">make_call_op_in_graph</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">258</span>         <span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">259</span>         <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">260</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_bound_context</span><span class="o">.</span><span class="n">function_call_options</span><span class="o">.</span><span class="n">as_attrs</span><span class="p">(),</span>
-<span class="g g-Whitespace">    </span><span class="mi">261</span>     <span class="p">)</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\tensorflow\python\eager\context.py:1688,</span> in <span class="ni">Context.call_function</span><span class="nt">(self, name, tensor_inputs, num_outputs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1686</span> <span class="n">cancellation_context</span> <span class="o">=</span> <span class="n">cancellation</span><span class="o">.</span><span class="n">context</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1687</span> <span class="k">if</span> <span class="n">cancellation_context</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1688</span>   <span class="n">outputs</span> <span class="o">=</span> <span class="n">execute</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1689</span>       <span class="n">name</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1690</span>       <span class="n">num_outputs</span><span class="o">=</span><span class="n">num_outputs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1691</span>       <span class="n">inputs</span><span class="o">=</span><span class="n">tensor_inputs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1692</span>       <span class="n">attrs</span><span class="o">=</span><span class="n">attrs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1693</span>       <span class="n">ctx</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1694</span>   <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1695</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1696</span>   <span class="n">outputs</span> <span class="o">=</span> <span class="n">execute</span><span class="o">.</span><span class="n">execute_with_cancellation</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1697</span>       <span class="n">name</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1698</span>       <span class="n">num_outputs</span><span class="o">=</span><span class="n">num_outputs</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>   <span class="mi">1702</span>       <span class="n">cancellation_manager</span><span class="o">=</span><span class="n">cancellation_context</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1703</span>   <span class="p">)</span>
-
-<span class="nn">File ~\my-jupyter-book\venv\Lib\site-packages\tensorflow\python\eager\execute.py:53,</span> in <span class="ni">quick_execute</span><span class="nt">(op_name, num_outputs, inputs, attrs, ctx, name)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>   <span class="n">ctx</span><span class="o">.</span><span class="n">ensure_initialized</span><span class="p">()</span>
-<span class="ne">---&gt; </span><span class="mi">53</span>   <span class="n">tensors</span> <span class="o">=</span> <span class="n">pywrap_tfe</span><span class="o">.</span><span class="n">TFE_Py_Execute</span><span class="p">(</span><span class="n">ctx</span><span class="o">.</span><span class="n">_handle</span><span class="p">,</span> <span class="n">device_name</span><span class="p">,</span> <span class="n">op_name</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>                                       <span class="n">inputs</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="k">except</span> <span class="n">core</span><span class="o">.</span><span class="n">_NotOkStatusException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span>   <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with learning rate: 0.001 (2/4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with learning rate: 0.01 (3/4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with learning rate: 0.1 (4/4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Experiment 1 completed!
 </pre></div>
 </div>
 </div>
@@ -961,10 +843,18 @@ Data preprocessing completed!
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting Experiment 2: β1 (Momentum) Exploration
   Training with beta1: 0.5 (1/4)
-  Training with beta1: 0.9 (2/4)
-  Training with beta1: 0.99 (3/4)
-  Training with beta1: 0.999 (4/4)
-Experiment 2 completed!
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with beta1: 0.9 (2/4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with beta1: 0.99 (3/4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with beta1: 0.999 (4/4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Experiment 2 completed!
 </pre></div>
 </div>
 </div>
@@ -997,10 +887,18 @@ Experiment 2 completed!
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting Experiment 3: β2 (Squared Gradient Decay) Investigation
   Training with beta2: 0.9 (1/4)
-  Training with beta2: 0.99 (2/4)
-  Training with beta2: 0.999 (3/4)
-  Training with beta2: 0.9999 (4/4)
-Experiment 3 completed!
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with beta2: 0.99 (2/4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with beta2: 0.999 (3/4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with beta2: 0.9999 (4/4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Experiment 3 completed!
 </pre></div>
 </div>
 </div>
@@ -1033,11 +931,21 @@ Experiment 3 completed!
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting Experiment 4: ε (Epsilon) Investigation
   Training with epsilon: 1e-09 (1/5)
-  Training with epsilon: 1e-08 (2/5)
-  Training with epsilon: 1e-07 (3/5)
-  Training with epsilon: 1e-06 (4/5)
-  Training with epsilon: 1e-05 (5/5)
-Experiment 4 completed!
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with epsilon: 1e-08 (2/5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with epsilon: 1e-07 (3/5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with epsilon: 1e-06 (4/5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Training with epsilon: 1e-05 (5/5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Experiment 4 completed!
 </pre></div>
 </div>
 </div>
@@ -1081,19 +989,19 @@ Experiment 4 completed!
 \n1. Learning Rate Comparison:
 </pre></div>
 </div>
-<img alt="../_images/d89c73b8ccf887701bee7e5457d9adcb8a23d4d0977d08760fe21773596ec9a8.png" src="../_images/d89c73b8ccf887701bee7e5457d9adcb8a23d4d0977d08760fe21773596ec9a8.png" />
+<img alt="../_images/dec0d09c79b207e7fd8abefe52fbed6b211e641b87a6dd4d89318553833bbc5f.png" src="../_images/dec0d09c79b207e7fd8abefe52fbed6b211e641b87a6dd4d89318553833bbc5f.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\n2. Beta1 Comparison:
 </pre></div>
 </div>
-<img alt="../_images/0261e7abb0b1258fa8daeeb2f544a5986627998305b4df861ba8e3ee7b5134e7.png" src="../_images/0261e7abb0b1258fa8daeeb2f544a5986627998305b4df861ba8e3ee7b5134e7.png" />
+<img alt="../_images/1b3c75bd4513d5c44dd372eb792144f2a6e695dc7968be6e5a641f51db83a0c5.png" src="../_images/1b3c75bd4513d5c44dd372eb792144f2a6e695dc7968be6e5a641f51db83a0c5.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\n3. Beta2 Comparison:
 </pre></div>
 </div>
-<img alt="../_images/8f581b793b088b272f7f34e579a26f1a782ef4a24ec98dcbd1715f881cd8ff6a.png" src="../_images/8f581b793b088b272f7f34e579a26f1a782ef4a24ec98dcbd1715f881cd8ff6a.png" />
+<img alt="../_images/6e658d335f961415f7468c47679bcca8404d2fdf3395a911925b859466f40353.png" src="../_images/6e658d335f961415f7468c47679bcca8404d2fdf3395a911925b859466f40353.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\n4. Epsilon Comparison:
 </pre></div>
 </div>
-<img alt="../_images/b35d479cbcb06482c3dc146ff51bfdcd473582f43fc934530d06b49f6f2fc475.png" src="../_images/b35d479cbcb06482c3dc146ff51bfdcd473582f43fc934530d06b49f6f2fc475.png" />
+<img alt="../_images/6af5a2681804c89a3a3010a7eda41150f82fb2519aaa9e5bd907094bb59de7d5.png" src="../_images/6af5a2681804c89a3a3010a7eda41150f82fb2519aaa9e5bd907094bb59de7d5.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>All plots generated!
 </pre></div>
 </div>
@@ -1140,24 +1048,24 @@ Experiment 4 completed!
 
 Convergence Analysis Results:
            config  convergence_epoch  final_accuracy  final_loss  stability
-11   beta2_0.9999                  9          0.9918    0.030845   0.001919
-14  epsilon_1e-07                  3          0.9916    0.027116   0.009012
-8       beta2_0.9                  9          0.9914    0.040258   0.003944
-9      beta2_0.99                  9          0.9912    0.040087   0.005059
-4       beta1_0.5                  9          0.9911    0.035546   0.005735
-6      beta1_0.99                  9          0.9910    0.035815   0.006009
-16  epsilon_1e-05                  4          0.9909    0.029848   0.010335
-13  epsilon_1e-08                  4          0.9901    0.031675   0.019542
-1        lr_0.001                  9          0.9901    0.036806   0.001626
-5       beta1_0.9                  8          0.9901    0.036990   0.004189
+13  epsilon_1e-08                  4          0.9916    0.030113   0.005000
+8       beta2_0.9                  4          0.9914    0.032186   0.001367
+7     beta1_0.999                  9          0.9913    0.041344   0.003861
+14  epsilon_1e-07                  4          0.9910    0.032020   0.009417
+9      beta2_0.99                  9          0.9908    0.037060   0.007588
+4       beta1_0.5                  9          0.9907    0.035426   0.006285
+10    beta2_0.999                  9          0.9905    0.047078   0.006856
+12  epsilon_1e-09                  4          0.9904    0.030915   0.009544
+6      beta1_0.99                  9          0.9904    0.042771   0.005091
+15  epsilon_1e-06                  4          0.9900    0.029238   0.006690
 
 Generating Parameter Sensitivity Analysis...
 </pre></div>
 </div>
-<img alt="../_images/d43529967d692842bcdfd8a8089cd0dd613407db846cb1b35794f29119f3cd27.png" src="../_images/d43529967d692842bcdfd8a8089cd0dd613407db846cb1b35794f29119f3cd27.png" />
-<img alt="../_images/a87080857d6f3616fbe1fb883acd62659925a848badcfb86fd829d7aff57aaa0.png" src="../_images/a87080857d6f3616fbe1fb883acd62659925a848badcfb86fd829d7aff57aaa0.png" />
-<img alt="../_images/d62c342dfb96aa005927baee4b12d8d2313576cd8604b4a6393a21df0bf41e71.png" src="../_images/d62c342dfb96aa005927baee4b12d8d2313576cd8604b4a6393a21df0bf41e71.png" />
-<img alt="../_images/271a34512929e14813ac2a656a98902a21567017c6282654bb32c27921434c12.png" src="../_images/271a34512929e14813ac2a656a98902a21567017c6282654bb32c27921434c12.png" />
+<img alt="../_images/bb23d49d2d99638a4f6cd13e3b2d2a54b09e0b287f1690c3e333f68ab3378742.png" src="../_images/bb23d49d2d99638a4f6cd13e3b2d2a54b09e0b287f1690c3e333f68ab3378742.png" />
+<img alt="../_images/75367e12611d5321f898eb440b862629bf5afe4c214a355afcbba0d6968965bf.png" src="../_images/75367e12611d5321f898eb440b862629bf5afe4c214a355afcbba0d6968965bf.png" />
+<img alt="../_images/cdb5838c6a0897303fff580450e2f433ec11e6ace2833d596e6e761b8ea40ffe.png" src="../_images/cdb5838c6a0897303fff580450e2f433ec11e6ace2833d596e6e761b8ea40ffe.png" />
+<img alt="../_images/fcefe1d89eaae4c48f77c6a448fec7e979f5a04bed9404babc9ec06093aacda4.png" src="../_images/fcefe1d89eaae4c48f77c6a448fec7e979f5a04bed9404babc9ec06093aacda4.png" />
 </div>
 </div>
 </section>
@@ -1213,20 +1121,20 @@ Generating Parameter Sensitivity Analysis...
 KEY INSIGHTS AND FINDINGS
 ================================================================================
 BEST OVERALL CONFIGURATION:
-Configuration: beta2_0.9999
-Final Accuracy: 0.9918
-Convergence Speed: 9 epochs
-Training Stability: 0.001919
+Configuration: epsilon_1e-08
+Final Accuracy: 0.9916
+Convergence Speed: 4 epochs
+Training Stability: 0.005000
 STATISTICAL ANALYSIS:
-Accuracy Range: 0.1009 - 0.9918
-Mean Accuracy: 0.9375 ± 0.2156
+Accuracy Range: 0.1028 - 0.9916
+Mean Accuracy: 0.9369 ± 0.2150
 Fastest Convergence: 0 epochs
-Most Stable: lr_0.001
+Most Stable: beta2_0.9
 PARAMETER-SPECIFIC INSIGHTS:
-• Optimal Learning Rate: 0.001 (Accuracy: 0.9901)
-• Beta1 Optimization: Default (0.9) vs Best (0.5)
-  Improvement: +0.100%
-• Epsilon Sweet Spot: 1e-07
+• Optimal Learning Rate: 0.001 (Accuracy: 0.9891)
+• Beta1 Optimization: Default (0.9) vs Best (0.999)
+  Improvement: +0.170%
+• Epsilon Sweet Spot: 1e-08
   Challenges &#39;epsilon is just for numerical stability&#39; assumption
 </pre></div>
 </div>
@@ -1293,7 +1201,7 @@ PARAMETER-SPECIFIC INSIGHTS:
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating final performance analysis...
 </pre></div>
 </div>
-<img alt="../_images/07b8068c97473d2d9196b30a4bd1c921f74351264b02321417982d6439b7fcf4.png" src="../_images/07b8068c97473d2d9196b30a4bd1c921f74351264b02321417982d6439b7fcf4.png" />
+<img alt="../_images/30676b9617d4c928a84caf675a3cdac05d8a424bf4cda1024348c66045c88419.png" src="../_images/30676b9617d4c928a84caf675a3cdac05d8a424bf4cda1024348c66045c88419.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1354,31 +1262,31 @@ KEY INSIGHTS FROM EXPERIMENTS:
 ==================================================
 \nLearning Rates:
 ------------------------------
-  lr_0.001             | Accuracy: 0.9901 | Loss: 0.0368
-  lr_0.0001            | Accuracy: 0.9882 | Loss: 0.0351
-  lr_0.01              | Accuracy: 0.9803 | Loss: 0.0857
-  lr_0.1               | Accuracy: 0.1009 | Loss: 2.3095
+  lr_0.001             | Accuracy: 0.9891 | Loss: 0.0452
+  lr_0.0001            | Accuracy: 0.9858 | Loss: 0.0405
+  lr_0.01              | Accuracy: 0.9774 | Loss: 0.0923
+  lr_0.1               | Accuracy: 0.1028 | Loss: 2.3146
 \nBeta1 Values:
 ------------------------------
-  beta1_0.5            | Accuracy: 0.9911 | Loss: 0.0355
-  beta1_0.99           | Accuracy: 0.9910 | Loss: 0.0358
-  beta1_0.9            | Accuracy: 0.9901 | Loss: 0.0370
-  beta1_0.999          | Accuracy: 0.9900 | Loss: 0.0429
+  beta1_0.999          | Accuracy: 0.9913 | Loss: 0.0413
+  beta1_0.5            | Accuracy: 0.9907 | Loss: 0.0354
+  beta1_0.99           | Accuracy: 0.9904 | Loss: 0.0428
+  beta1_0.9            | Accuracy: 0.9896 | Loss: 0.0394
 \nBeta2 Values:
 ------------------------------
-  beta2_0.9999         | Accuracy: 0.9918 | Loss: 0.0308
-  beta2_0.9            | Accuracy: 0.9914 | Loss: 0.0403
-  beta2_0.99           | Accuracy: 0.9912 | Loss: 0.0401
-  beta2_0.999          | Accuracy: 0.9897 | Loss: 0.0400
+  beta2_0.9            | Accuracy: 0.9914 | Loss: 0.0322
+  beta2_0.99           | Accuracy: 0.9908 | Loss: 0.0371
+  beta2_0.999          | Accuracy: 0.9905 | Loss: 0.0471
+  beta2_0.9999         | Accuracy: 0.9882 | Loss: 0.0450
 \nEpsilon Values:
 ------------------------------
-  epsilon_1e-07        | Accuracy: 0.9916 | Loss: 0.0271
-  epsilon_1e-05        | Accuracy: 0.9909 | Loss: 0.0298
-  epsilon_1e-08        | Accuracy: 0.9901 | Loss: 0.0317
-  epsilon_1e-09        | Accuracy: 0.9898 | Loss: 0.0281
-  epsilon_1e-06        | Accuracy: 0.9895 | Loss: 0.0277
+  epsilon_1e-08        | Accuracy: 0.9916 | Loss: 0.0301
+  epsilon_1e-07        | Accuracy: 0.9910 | Loss: 0.0320
+  epsilon_1e-09        | Accuracy: 0.9904 | Loss: 0.0309
+  epsilon_1e-06        | Accuracy: 0.9900 | Loss: 0.0292
+  epsilon_1e-05        | Accuracy: 0.9861 | Loss: 0.0439
 \n==================================================
-BEST OVERALL CONFIGURATION: beta2_0.9999 with accuracy 0.9918
+BEST OVERALL CONFIGURATION: epsilon_1e-08 with accuracy 0.9916
 ==================================================
 </pre></div>
 </div>
