@@ -1,11 +1,17 @@
-# Welcome to your Jupyter Book
+# The Portfolio of Dane Casiño
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Welcome! This site is a dedicated digital portfolio built using **Jupyter Book**.
 
-Check out the content pages bundled with this sample book to see more.
+It is designed to give you a clear, structured, and interactive overview of my **Elective 4: Deep Learning** work. Each page provides in-depth documentation and examples of my skills and projects.
+
+---
+
+## What You Will Find:
+* **Detailed Project Narratives:** The *why* and *how* behind my key work.
+* **Technical Demonstrations:** Code, output, and visual results in an accessible format.
+* **Skills in Action:** Practical application of my core technical competencies.
+
+Use the table of contents to browse the complete collection of my portfolio pieces.
 
 ```{tableofcontents}
-```
+
